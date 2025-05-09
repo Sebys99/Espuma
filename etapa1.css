@@ -1,0 +1,24 @@
+:root {
+    --heighChat: 400px;
+    --widthChat: 300px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #FFEDED; 
+    height: 95vh;
+    width: 95vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#chat {
+    width: var(--widthChat);
+    height: var(--heighChat);
+}
