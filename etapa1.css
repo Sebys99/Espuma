@@ -1,5 +1,5 @@
 :root {
-    --heighChat: 400px;
+    --heightChat: 400px;
     --widthChat: 300px;
 }
 
@@ -20,5 +20,13 @@ body {
 
 #chat {
     width: var(--widthChat);
-    height: var(--heighChat);
+    height: var(--heightChat);
 }
+
+#chatCerrado {
+    position: fixed;
+    width: var(--widthChat);
+    margin-top: auto;
+    bottom: 0px;
+}
+
