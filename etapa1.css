@@ -1,6 +1,7 @@
 :root {
     --heightChat: 400px;
     --widthChat: 300px;
+    --tamanioRosa: 100px;
 }
 
 *,
@@ -21,6 +22,7 @@ body {
 #chat {
     width: var(--widthChat);
     height: var(--heightChat);
+    z-index: 1000;
 }
 
 #chatCerrado {
@@ -28,6 +30,9 @@ body {
     width: var(--widthChat);
     margin-top: auto;
     bottom: 0px;
+    pointer-events: all;
+    cursor: pointer;
+    display: none;
 }
 
 #close {
@@ -35,4 +40,54 @@ body {
     cursor: pointer;
 }
 
+#divRosas{
+    position: relative;
+    width: var(--widthChat);
+    height: var(--heightChat);
+}
+
+.rosa {
+    position: absolute;
+    width: var(--tamanioRosa);
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Rosa arriba */
+#rosa1 {
+    top: calc(0px - var(--tamanioRosa) / 3);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Rosa abajo */
+#rosa2 {
+    bottom: calc(0px - var(--tamanioRosa) / 3);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Rosa izquierda superior */
+#rosa3 {
+    left: calc(0px - var(--tamanioRosa) / 2);
+    top: 25%;
+}
+
+/* Rosa izquierda inferior */
+#rosa4 {
+    left: calc(0px - var(--tamanioRosa) / 2);
+    bottom: 25%;
+}
+
+/* Rosa derecha superior */
+#rosa5 {
+    right: calc(0px - var(--tamanioRosa) / 2);
+    top: 25%;
+}
+
+/* Rosa derecha inferior */
+#rosa6 {
+    right: calc(0px - var(--tamanioRosa) / 2);
+    bottom: 25%;
+}
 
