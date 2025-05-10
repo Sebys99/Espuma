@@ -30,3 +30,9 @@ body {
     bottom: 0px;
 }
 
+#close {
+    pointer-events: all;
+    cursor: pointer;
+}
+
+
