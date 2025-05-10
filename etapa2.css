@@ -1,1 +1,116 @@
+/* modificaciones a los svg */
+:root {
+    --escala-fase1: 0.48; /*Escala de las rosas fase 1*/
+}
+
+
+
+  /* modificaciones a los svg */
+  html {
+    background: linear-gradient(to right, #ffe5e5, #884076);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .pantalla {
+    position: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+
+.chat {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: auto;
+
+    .st0 {
+        fill: #ffc7c8;
+     }
+
+    .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7 {
+    stroke-miterlimit: 10;
+    }
+
+    .st0, .st3, .st4, .st6, .st7 {
+        stroke-width: 6px;
+    }
+
+    .st0, .st7 {
+        stroke: #7ef1ff;
+    }
+
+    .st1 {
+    fill: #f5ffc9;
+    }
+
+  .st1, .st2, .st5 {
+    stroke: aqua;
+  }
+
+  .st8 {
+    fill: #e4d4ff;
+  }
+
+  .st2 {
+    fill: #fdffc2;
+  }
+
+  .st3 {
+    fill: url(#Degradado_sin_nombre);
+  }
+
+  .st3, .st4, .st6 {
+    stroke: #67f1ff;
+  }
+
+  .st4 {
+    fill: #eab0b0;
+  }
+
+  .st5 {
+    fill: #fffcc9;
+  }
+
+  .st6 {
+    fill: url(#Degradado_sin_nombre_2);
+  }
+
+  .st7 {
+    fill: none;
+  }
+}
+
+.rosa-fase1 {
+    position: absolute;
+    transform: scale(var(--escala-fase1));
+}
+
+#R1-F1 {
+     top: 5%; 
+     left: 45%; 
+    }
+#R2-F1 { 
+    top: 30%; 
+    left: 15%; }
+#R3-F1 { top: 30%;
+     right: 15%; }
+#R4-F1 { 
+    bottom: 30%; 
+    left: 15%; }
+#R5-F1 { 
+    bottom: 30%; 
+    right: 15%; }
+#R6-F1 { 
+    bottom: 5%; 
+    left: 45%; }
 
