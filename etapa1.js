@@ -3,117 +3,110 @@ document.addEventListener("DOMContentLoaded", function () {
     const grupoClose = document.getElementById("close");
     const chat = document.getElementById("chat");
     const chatCerrado = document.getElementById("chatCerrado");
+    const rosas = [
+        document.getElementById("rosa1"),
+        document.getElementById("rosa2"),
+        document.getElementById("rosa3"),
+        document.getElementById("rosa4"),
+        document.getElementById("rosa5"),
+        document.getElementById("rosa6")
+    ];
     
     // Configuración inicial
     chatCerrado.style.display = "none";
     
-    // Función para posicionar rosas en forma de estrella
+    // Función para posicionar rosas en forma de estrella con rotaciones diferentes
     function posicionarEstrella() {
-        // Centro
-        document.getElementById("rosa2").style.top = "50%";
-        document.getElementById("rosa2").style.left = "50%";
-        document.getElementById("rosa2").style.transform = "translate(-50%, -50%)";
+        // Posiciones de la estrella
+        const posicionesEstrella = [
+            { top: "15%", left: "50%" },   // Punta superior
+            { top: "50%", left: "50%" },   // Centro
+            { top: "70%", left: "15%" },   // Punta inferior izquierda
+            { top: "70%", left: "85%" },   // Punta inferior derecha
+            { top: "30%", left: "15%" },   // Punta media izquierda
+            { top: "30%", left: "85%" }    // Punta media derecha
+        ];
         
-        // Puntas de la estrella
-        document.getElementById("rosa1").style.top = "15%";
-        document.getElementById("rosa1").style.left = "50%";
-        document.getElementById("rosa1").style.transform = "translate(-50%, -50%)";
-        
-        document.getElementById("rosa3").style.top = "70%";
-        document.getElementById("rosa3").style.left = "15%";
-        document.getElementById("rosa3").style.transform = "translate(-50%, -50%)";
-        
-        document.getElementById("rosa4").style.top = "70%";
-        document.getElementById("rosa4").style.left = "85%";
-        document.getElementById("rosa4").style.transform = "translate(-50%, -50%)";
-        
-        document.getElementById("rosa5").style.top = "30%";
-        document.getElementById("rosa5").style.left = "15%";
-        document.getElementById("rosa5").style.transform = "translate(-50%, -50%)";
-        
-        document.getElementById("rosa6").style.top = "30%";
-        document.getElementById("rosa6").style.left = "85%";
-        document.getElementById("rosa6").style.transform = "translate(-50%, -50%)";
+        // Asignar posición y ángulo inicial diferente a cada rosa
+        rosas.forEach((rosa, index) => {
+            const posicion = posicionesEstrella[index];
+            rosa.style.top = posicion.top;
+            rosa.style.left = posicion.left;
+            
+            // Ángulo inicial diferente para cada rosa (60° de separación)
+            const anguloInicial = index * 60; // 0°, 60°, 120°, 180°, 240°, 300°
+            rosa.style.setProperty('--angulo-inicial', `${anguloInicial}deg`);
+            
+            // Activar rotación continua
+            rosa.classList.add("girando");
+        });
     }
     
     // Función para resetear posiciones a las originales
     function resetearPosiciones() {
+        // Detener rotación
+        rosas.forEach(rosa => {
+            rosa.classList.remove("girando");
+            rosa.style.removeProperty('--angulo-inicial');
+        });
+        
         // Rosa arriba
-        document.getElementById("rosa1").style.top = "calc(0px - var(--tamanioRosa) / 3)";
-        document.getElementById("rosa1").style.left = "50%";
-        document.getElementById("rosa1").style.transform = "translateX(-50%)";
+        rosas[0].style.top = "calc(0px - var(--tamanioRosa) / 3)";
+        rosas[0].style.left = "50%";
+        rosas[0].style.transform = "translateX(-50%)";
         
         // Rosa abajo
-        document.getElementById("rosa2").style.bottom = "calc(0px - var(--tamanioRosa) / 3)";
-        document.getElementById("rosa2").style.left = "50%";
-        document.getElementById("rosa2").style.transform = "translateX(-50%)";
-        document.getElementById("rosa2").style.top = "";
+        rosas[1].style.bottom = "calc(0px - var(--tamanioRosa) / 3)";
+        rosas[1].style.left = "50%";
+        rosas[1].style.transform = "translateX(-50%)";
+        rosas[1].style.top = "";
         
         // Rosas laterales
-        document.getElementById("rosa3").style.left = "calc(0px - var(--tamanioRosa) / 2)";
-        document.getElementById("rosa3").style.top = "25%";
-        document.getElementById("rosa3").style.transform = "";
+        rosas[2].style.left = "calc(0px - var(--tamanioRosa) / 2)";
+        rosas[2].style.top = "25%";
+        rosas[2].style.transform = "";
         
-        document.getElementById("rosa4").style.left = "calc(0px - var(--tamanioRosa) / 2)";
-        document.getElementById("rosa4").style.bottom = "25%";
-        document.getElementById("rosa4").style.top = "";
-        document.getElementById("rosa4").style.transform = "";
+        rosas[3].style.left = "calc(0px - var(--tamanioRosa) / 2)";
+        rosas[3].style.bottom = "25%";
+        rosas[3].style.top = "";
+        rosas[3].style.transform = "";
         
-        document.getElementById("rosa5").style.right = "calc(0px - var(--tamanioRosa) / 2)";
-        document.getElementById("rosa5").style.top = "25%";
-        document.getElementById("rosa5").style.left = "";
-        document.getElementById("rosa5").style.transform = "";
+        rosas[4].style.right = "calc(0px - var(--tamanioRosa) / 2)";
+        rosas[4].style.top = "25%";
+        rosas[4].style.left = "";
+        rosas[4].style.transform = "";
         
-        document.getElementById("rosa6").style.right = "calc(0px - var(--tamanioRosa) / 2)";
-        document.getElementById("rosa6").style.bottom = "25%";
-        document.getElementById("rosa6").style.top = "";
-        document.getElementById("rosa6").style.transform = "";
+        rosas[5].style.right = "calc(0px - var(--tamanioRosa) / 2)";
+        rosas[5].style.bottom = "25%";
+        rosas[5].style.top = "";
+        rosas[5].style.transform = "";
     }
     
-    // Función para intercambiar posiciones en forma de estrella
+    // Resto del código permanece igual...
+    grupoClose.addEventListener("click", function() {
+        chat.style.display = "none";
+        chatCerrado.style.display = "block";
+        posicionarEstrella();
+        animationInterval = setInterval(intercambiarPosiciones, 2000);
+    });
+    
+    chatCerrado.addEventListener("click", function() {
+        chat.style.display = "block";
+        chatCerrado.style.display = "none";
+        clearInterval(animationInterval);
+        resetearPosiciones();
+    });
+    
     function intercambiarPosiciones() {
-        const rosas = [
-            document.getElementById("rosa1"),
-            document.getElementById("rosa3"),
-            document.getElementById("rosa5"),
-            document.getElementById("rosa2"),
-            document.getElementById("rosa6"),
-            document.getElementById("rosa4")
-        ];
-        
-        // Guardar posiciones actuales
         const posiciones = rosas.map(rosa => ({
             top: rosa.style.top,
             left: rosa.style.left
         }));
         
-        // Rotar posiciones en sentido antihorario
         for (let i = 0; i < rosas.length; i++) {
             const nextIndex = (i + 1) % rosas.length;
             rosas[i].style.top = posiciones[nextIndex].top;
             rosas[i].style.left = posiciones[nextIndex].left;
         }
     }
-    
-    // Evento para cerrar el chat
-    grupoClose.addEventListener("click", function() {
-        chat.style.display = "none";
-        chatCerrado.style.display = "block";
-        posicionarEstrella();
-        
-        // Iniciar animación cada 2 segundos
-        animationInterval = setInterval(intercambiarPosiciones, 2000);
-    });
-    
-    // Evento para abrir el chat
-    chatCerrado.addEventListener("click", function() {
-        chat.style.display = "block";
-        chatCerrado.style.display = "none";
-        
-        // Detener la animación
-        clearInterval(animationInterval);
-        
-        // Resetear posiciones
-        resetearPosiciones();
-    });
 });
