@@ -2,3 +2,70 @@ body {
     background-color: rgba(83, 39, 72, 0.83);
 
   }
+
+
+ .chat-fase-1 {
+  position: relative;
+  width: 90vw; /* 80% del ancho de la ventana */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.chat-fase-1 svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.spike1-fase-1,
+.spike2-fase-1,
+.spike3-fase-1,
+.spike4-fase-1,
+.spike5-fase-1,
+.spike6-fase-1 {
+  position: absolute;
+  width: 11%;
+  height: auto;
+  z-index: -1;
+}
+
+.spike1-fase-1 {
+  top: 2%;
+  left: 16%;
+  transform: rotate(49deg);
+}
+
+.spike2-fase-1 {
+  top: 4%;
+  right: 6%;
+  transform: rotate(-5deg);
+}
+
+.spike3-fase-1 {
+  top: 38%;
+  left: 16%;
+  transform: rotate(0deg);
+}
+
+.spike4-fase-1 {
+  top: 43%;
+  right: 26%;
+  transform: rotate(10deg);
+}
+
+.spike5-fase-1 {
+  top: 56%;
+  left: 27%;
+  transform: rotate(25deg);
+}
+
+.spike6-fase-1 {
+  top: 57%;
+  right: 12%;
+  transform: rotate(90deg);
+}
