@@ -104,3 +104,16 @@ body {
         transform: translate(-50%, -50%) rotate(calc(var(--angulo-inicial) + 360deg));
     }
 }
+
+@media screen and (min-width: 1500px){
+    :root {
+    --heightChat: 800px;
+    --widthChat: 600px;
+    --tamanioRosa: 200px;
+    }
+
+}
+
+@media screen and (pointer: coarse) {
+
+}
