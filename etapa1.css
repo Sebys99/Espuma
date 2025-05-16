@@ -51,6 +51,7 @@ body {
     width: var(--tamanioRosa);
     z-index: -1;
     transition: all 0.5s ease-in-out;
+    transform-origin: center;
 }
 
 /* Rosa arriba */
@@ -91,3 +92,15 @@ body {
     bottom: 25%;
 }
 
+.rosa.girando {
+    animation: rotacion 4s linear infinite;
+}
+
+@keyframes rotacion {
+    from {
+        transform: translate(-50%, -50%) rotate(var(--angulo-inicial));
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(calc(var(--angulo-inicial) + 360deg));
+    }
+}
