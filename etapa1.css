@@ -51,6 +51,7 @@ body {
     width: var(--tamanioRosa);
     z-index: -1;
     transition: all 0.5s ease-in-out;
+    transform-origin: center;
 }
 
 /* Rosa arriba */
@@ -91,3 +92,28 @@ body {
     bottom: 25%;
 }
 
+.rosa.girando {
+    animation: rotacion 4s linear infinite;
+}
+
+@keyframes rotacion {
+    from {
+        transform: translate(-50%, -50%) rotate(var(--angulo-inicial));
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(calc(var(--angulo-inicial) + 360deg));
+    }
+}
+
+@media screen and (min-width: 1500px){
+    :root {
+    --heightChat: 800px;
+    --widthChat: 600px;
+    --tamanioRosa: 200px;
+    }
+
+}
+
+@media screen and (pointer: coarse) {
+
+}
