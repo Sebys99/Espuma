@@ -1,118 +1,355 @@
-body {
+  body {
     background-color: rgba(83, 39, 72, 0.83);
+    /*animation: fondo-animado .5s infinite alternate;*/
+  }
 
+  main {
+    width: 90vw;               /* Escala con el viewport */
+    max-width: 1000px;         /* No se agranda más allá de 1000px */
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto;            /* Centrado horizontal */
+    position: relative;        /* Necesario para posicionar spikes absolutamente dentro */
+  }
+
+  .chat-fase-1 {
+    position: relative;
+    width: 130vw; 
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+
+  .chat-fase-1 svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .st10 {
+  font-family: 'Rubik Glitch';
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  font-size: 1.4em;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
   }
 
 
- .chat-fase-1 {
-  position: relative;
-  width: 110vw; 
-  max-width: 900px;
-  margin: 0 auto;
-}
+  /* -------------------------------------------------- FASE 1----------------------------------------------- */	
+  .spike1-fase-1,
+  .spike2-fase-1,
+  .spike3-fase-1,
+  .spike4-fase-1,
+  .spike5-fase-1,
+  .spike6-fase-1 {
+    position: absolute;
+    width: 19%;
+    height: auto;
+    z-index: -1;
+  }
 
-.chat-fase-1 svg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-.spike1-fase-1,
-.spike2-fase-1,
-.spike3-fase-1,
-.spike4-fase-1,
-.spike5-fase-1,
-.spike6-fase-1 {
-  position: absolute;
-  width: 13%;
-  height: auto;
-  z-index: -1;
-}
-
-.spike1-fase-1 {
-  top: 2%;
-  left: 16%;
-  --rot: 49deg;
-  transform: rotate(var(--rot));
-}
+  .spike1-fase-1 {
+    top: 2%;
+    left: 0%;
+    --rot: -27deg;
+    transform: rotate(var(--rot));
+  }
 
 
-.spike1-fase-1 img {
-  width: 100%;
-  height: auto;
-  animation: 
-  spike-glitch-interval 3s infinite linear,
-  spike-color-cycle 3s infinite linear;
-  mix-blend-mode: screen;
-}
+  .spike1-fase-1 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 3s infinite linear,
+    spike-color-cycle 3s infinite linear;
+    mix-blend-mode: screen;
+  }
 
-.spike2-fase-1 {
-  top: 4%;
-  right: 9%;
-  --rot: -5deg;
-  transform: rotate(var(--rot));
-}
-
-.spike3-fase-1 {
-  top: 38%;
-  left: 16%;
-  --rot: 0deg;
-  transform: rotate(var(--rot));
-  animation: spike-glitch 0.3s infinite linear;
-}
-
-.spike4-fase-1 {
-  top: 47%;
-  right: 32%;
-  --rot: 10deg;
-  transform: rotate(var(--rot));
-}
-
-.spike5-fase-1 {
-  top: 63%;
-  left: 33%;
-  --rot: 25deg;
-  transform: rotate(var(--rot));
-  animation:
-  spike-glitch-interval 5s infinite linear,
-  spike-color-cycle 5s infinite linear;
-}
-
-.spike6-fase-1 {
-  top: 57%;
-  right: 12%;
-  --rot: 90deg;
-  transform: rotate(var(--rot));
-}
-
-.spike6-fase-1 img {
-  width: 100%;
-  height: auto;
-  animation: 
-  spike-glitch-interval 3s infinite linear,
-  spike-color-cycle 3s infinite linear;
-  mix-blend-mode: screen;
-}
+  .spike2-fase-1 {
+    top: 3%;
+    left: 97%;
+    --rot: -13deg;
+    transform: rotate(var(--rot));
+  }
 
 
-@keyframes spike-glitch-interval {
-  0%   { transform: translate(0, 0) rotate(var(--rot)); }
-  2%   { transform: translate(3px, -3px) rotate(var(--rot)); }
-  4%   { transform: translate(-3px, 3px) rotate(var(--rot)); }
-  6%   { transform: translate(4px, 4px) rotate(var(--rot)); }
-  8%   { transform: translate(-4px, -4px) rotate(var(--rot)); }
-  100%  { transform: translate(0, 0) rotate(var(--rot)); }
-}
+  .spike2-fase-1 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 1s infinite linear,
+    spike-color-cycle 1s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike3-fase-1 {
+    top: 40%;
+    right: 95%;
+    --rot: 0deg;
+    transform: rotate(var(--rot));
+    animation: spike-glitch 0.3s infinite linear;
+  }
+
+  .spike4-fase-1 {
+    top: 50%;
+    right: 15%;
+    --rot: 10deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike5-fase-1 {
+    top: 69%;
+    left: 21%;
+    --rot: 12deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike5-fase-1 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 5s infinite linear,
+    spike-color-cycle 5s infinite linear;
+    mix-blend-mode: screen;
+  }
 
 
-@keyframes spike-color-cycle {
-  0%   { filter: none; }
-  2%   { filter: drop-shadow(0 0 2px #f00) drop-shadow(0 0 2px #00f); }
-  10%  { filter: drop-shadow(0 0 2px #f00) drop-shadow(0 0 2px #00f); }
-  100% { filter: none; }
-}
+  .spike6-fase-1 {
+    top: 70%;
+    left: 100%;
+    --rot: 90deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike6-fase-1 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 3s infinite linear,
+    spike-color-cycle 3s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  /* -------------------------------------------------- FASE 2----------------------------------------------- */
+  .spike1-fase-2,
+  .spike2-fase-2,
+  .spike3-fase-2,
+  .spike4-fase-2,
+  .spike5-fase-2,
+  .spike6-fase-2 {
+    position: absolute;
+    width: 19%;
+    height: auto;
+    z-index: -1;
+    display: none;
+  }
+
+  .spike1-fase-2 {
+    top: 2%;
+    left: 0%;
+    --rot: -27deg;
+    transform: rotate(var(--rot));
+  }
+
+
+  .spike1-fase-2 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 3s infinite linear,
+    spike-color-cycle 3s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike2-fase-2 {
+    top: 3%;
+    left: 97%;
+    --rot: -13deg;
+    transform: rotate(var(--rot));
+  }
+
+
+  .spike2-fase-2 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 1s infinite linear,
+    spike-color-cycle 1s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike3-fase-2 {
+    top: 40%;
+    right: 95%;
+    --rot: 0deg;
+    transform: rotate(var(--rot));
+    animation: spike-glitch 0.3s infinite linear;
+  }
+
+  .spike4-fase-2 {
+    top: 50%;
+    right: 15%;
+    --rot: 10deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike5-fase-2 {
+    top: 69%;
+    left: 21%;
+    --rot: 12deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike5-fase-2 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 5s infinite linear,
+    spike-color-cycle 5s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+
+  .spike6-fase-2 {
+    top: 70%;
+    left: 100%;
+    --rot: 90deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike6-fase-2 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 3s infinite linear,
+    spike-color-cycle 3s infinite linear;
+    mix-blend-mode: screen;
+  }
+  /* -------------------------------------------------- FASE 3----------------------------------------------- */
+  .spike1-fase-3,
+  .spike2-fase-3,
+  .spike3-fase-3,
+  .spike4-fase-3,
+  .spike5-fase-3,
+  .spike6-fase-3 {
+    position: absolute;
+    width: 19%;
+    height: auto;
+    z-index: -1;
+    display: none;
+  }
+
+  .spike1-fase-3 {
+    top: 2%;
+    left: 0%;
+    --rot: -27deg;
+    transform: rotate(var(--rot));
+  }
+
+
+  .spike1-fase-3 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 3s infinite linear,
+    spike-color-cycle 3s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike2-fase-3 {
+    top: 3%;
+    left: 97%;
+    --rot: -13deg;
+    transform: rotate(var(--rot));
+  }
+
+
+  .spike2-fase-3 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 1s infinite linear,
+    spike-color-cycle 1s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike3-fase-3 {
+    top: 40%;
+    right: 95%;
+    --rot: 0deg;
+    transform: rotate(var(--rot));
+    animation: spike-glitch 0.3s infinite linear;
+  }
+
+  .spike4-fase-3 {
+    top: 50%;
+    right: 15%;
+    --rot: 10deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike5-fase-3 {
+    top: 69%;
+    left: 21%;
+    --rot: 12deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike5-fase-3 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 5s infinite linear,
+    spike-color-cycle 5s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+
+  .spike6-fase-3 {
+    top: 70%;
+    left: 100%;
+    --rot: 90deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike6-fase-3 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 3s infinite linear,
+    spike-color-cycle 3s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+
+/* -------------------------------------------------- ANIMACIONES----------------------------------------------- */
+  @keyframes spike-glitch-interval {
+    0%   { transform: translate(0, 0) rotate(var(--rot)); }
+    2%   { transform: translate(3px, -3px) rotate(var(--rot)); }
+    4%   { transform: translate(-3px, 3px) rotate(var(--rot)); }
+    6%   { transform: translate(4px, 4px) rotate(var(--rot)); }
+    8%   { transform: translate(-4px, -4px) rotate(var(--rot)); }
+    100%  { transform: translate(0, 0) rotate(var(--rot)); }
+  }
+
+
+  @keyframes spike-color-cycle {
+    0%   { filter: none; }
+    2%   { filter: drop-shadow(0 0 2px #f00) drop-shadow(0 0 2px #00f); }
+    10%  { filter: drop-shadow(0 0 2px #f00) drop-shadow(0 0 2px #00f); }
+    100% { filter: none; }
+  }
+
+
+
+  @keyframes fondo-animado {
+    0%   { background-color: white; }  /* púrpura */
+    25%  { background-color: #5b3c64; }  /* vino más suave */
+    50%  { background-color: black; }  /* más rojizo */
+    75%  { background-color: white; }  /* morado oscuro */
+    100% { background-color: #532748; } /* vuelve al original */
+  }
