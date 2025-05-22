@@ -1,17 +1,15 @@
 /* modificaciones a los svg */
 :root {
-  --escala-rosa: 0.7;
-  --tamanio-rosa: 100px;
+  --escala-rosa: 0.8;
+  --tamanio-rosa: 150px;
   --offset-distancia: 20%; 
-    --heightChat:  500px;
-    --widthChat: 650px;
+  --heightChat:  500px;
+  --widthChat: 650px;
 }
-
-
 
   /* modificaciones a los svg */
   html {
-    background: linear-gradient(to right, #ffe5e5, #884076);
+    background: linear-gradient(to right, #ffe5e5 80%, #884076 100%);
     margin: 0;
     padding: 0;
     height: 100%;
@@ -33,7 +31,7 @@
     
   }
 
-.chat {
+.chat1 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -109,35 +107,39 @@
   transition: transform 0.3s ease; /* Efecto suave al redimensionar */
 }
 
-
-#R1-F1 { /* Top */
-  top: calc(58% - var(--heightChat)/2 - var(--tamanio-rosa));
+#R1-F1 { /* flor de arriba */
+  top: calc(69% - var(--heightChat)/2 - var(--tamanio-rosa));
   left: 50%;
   transform: translateX(-50%) scale(var(--escala-rosa));
 }
 
-#R2-F1 { /* Top-Right */
+#R2-F1 { /* flor derecha-arriba */
   top: calc(35% - var(--tamanio-rosa)/2);
-  right: calc(80% - var(--widthChat)/2 - var(--offset-distancia));
+  right: calc(85% - var(--widthChat)/2 - var(--offset-distancia));
 }
 
-#R3-F1 { /* Bottom-Right */
+#R3-F1 { /* flor abajo-arriba */
   bottom: calc(35% - var(--tamanio-rosa)/2);
-  right: calc(80% - var(--widthChat)/2 - var(--offset-distancia));
+  right: calc(85% - var(--widthChat)/2 - var(--offset-distancia));
 }
 
-#R4-F1 { /* Bottom */
-  bottom: calc(63% - var(--heightChat)/2 - var(--tamanio-rosa));
+#R4-F1 { /* flor de abajo */
+  bottom: calc(74% - var(--heightChat)/2 - var(--tamanio-rosa));
   left: 50%;
   transform: translateX(-50%) scale(var(--escala-rosa));
 }
 
-#R5-F1 { /* Bottom-Left */
-  bottom: calc(32% - var(--tamanio-rosa)/2);
-  left: calc(80% - var(--widthChat)/2 - var(--offset-distancia));
+#R5-F1 { /* flor abajo-izquierda */
+  bottom: calc(33% - var(--tamanio-rosa)/2);
+  left: calc(85% - var(--widthChat)/2 - var(--offset-distancia));
 }
 
-#R6-F1 { /* Top-Left */
-  top: calc(32% - var(--tamanio-rosa)/2);
-  left: calc(80% - var(--widthChat)/2 - var(--offset-distancia));
+#R6-F1 { /* flor arriba-izquierda */
+  top: calc(35% - var(--tamanio-rosa)/2);
+  left: calc(85% - var(--widthChat)/2 - var(--offset-distancia));
 }
+
+body[data-hash=""] #chat1 {
+  display: grid;
+}
+
