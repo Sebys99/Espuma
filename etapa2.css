@@ -38,63 +38,6 @@
     transform: translate(-50%, -50%);
     width: var(--widthChat);
     height: var(--heightChat);
-    
-
-    .st0 {
-        fill: #ffc7c8;
-     }
-
-    .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7 {
-    stroke-miterlimit: 10;
-    }
-
-    .st0, .st3, .st4, .st6, .st7 {
-        stroke-width: 6px;
-    }
-
-    .st0, .st7 {
-        stroke: #7ef1ff;
-    }
-
-    .st1 {
-    fill: #f5ffc9;
-    }
-
-  .st1, .st2, .st5 {
-    stroke: aqua;
-  }
-
-  .st8 {
-    fill: #e4d4ff;
-  }
-
-  .st2 {
-    fill: #fdffc2;
-  }
-
-  .st3 {
-    fill: url(#Degradado_sin_nombre);
-  }
-
-  .st3, .st4, .st6 {
-    stroke: #67f1ff;
-  }
-
-  .st4 {
-    fill: #eab0b0;
-  }
-
-  .st5 {
-    fill: #fffcc9;
-  }
-
-  .st6 {
-    fill: url(#Degradado_sin_nombre_2);
-  }
-
-  .st7 {
-    fill: none;
-  }
 }
 
 .rosa-fase1 {
