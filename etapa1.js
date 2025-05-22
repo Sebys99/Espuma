@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     let animationInterval;
+    let primeraVezCerrado = true;
     const grupoClose = document.getElementById("close");
     const chat = document.getElementById("chat");
     const chatCerrado = document.getElementById("chatCerrado");
@@ -27,13 +28,13 @@ document.addEventListener("DOMContentLoaded", function () {
             { top: "30%", left: "85%" }    // Punta media derecha
         ];
         
-        // Asignar posición y ángulo inicial diferente a cada rosa
+        // Asignar posición y angulo inicial diferente a cada rosa
         rosas.forEach((rosa, index) => {
             const posicion = posicionesEstrella[index];
             rosa.style.top = posicion.top;
             rosa.style.left = posicion.left;
             
-            // Ángulo inicial diferente para cada rosa (60° de separación)
+            // angulo inicial diferente para cada rosa (60° de separación)
             const anguloInicial = index * 60; // 0°, 60°, 120°, 180°, 240°, 300°
             rosa.style.setProperty('--angulo-inicial', `${anguloInicial}deg`);
             
@@ -82,12 +83,16 @@ document.addEventListener("DOMContentLoaded", function () {
         rosas[5].style.transform = "";
     }
     
-    // Resto del código permanece igual...
     grupoClose.addEventListener("click", function() {
-        chat.style.display = "none";
-        chatCerrado.style.display = "block";
-        posicionarEstrella();
-        animationInterval = setInterval(intercambiarPosiciones, 2000);
+        if (primeraVezCerrado) {
+            chat.style.display = "none";
+            chatCerrado.style.display = "block";
+            posicionarEstrella();
+            animationInterval = setInterval(intercambiarPosiciones, 2000);
+            primeraVezCerrado = false;
+        } else {
+            window.location.href = "etapa2.html";
+        }
     });
     
     chatCerrado.addEventListener("click", function() {

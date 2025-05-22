@@ -25,9 +25,10 @@ body {
     z-index: 1000;
 }
 
-#chatCerrado {
+#chatCerrado{
     position: fixed;
     width: var(--widthChat);
+    height: calc (var(--widthChat) / 5 );
     margin-top: auto;
     bottom: 0px;
     pointer-events: all;
