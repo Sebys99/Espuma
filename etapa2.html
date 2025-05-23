@@ -2,101 +2,524 @@
 <html lang="es">
 
 <head>
-    <link rel="stylesheet" href="/etapa2.css">
-    <script src="/borrow.min.js"></script>
-    <title>Espuma</title>
+  <link rel="stylesheet" href="/etapa2.css">
+  <script src="/borrow.min.js"></script>
+  <script src="/etapa2.js"></script>
+  <title>Espuma</title>
 </head>
 <section class="pantalla">
+  <div id="divRosas" data-mouse-state="mouse-toggled">
+    <div id="chat-1" class="chat" data-click-count="0">
+      <svg width="100%" height="100%" viewBox="0 0 311 390" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 239L307 239L307 30L3 30L3 239Z" fill="#FFDFE0" stroke="#C7F1FF" stroke-width="6"
+          stroke-miterlimit="10" />
 
-    <!-- el chat esta dentro de la misma sección -->
-    <div class="chat1" id="chat1" data-hash="chat1">
-<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 1024">
-  <!-- Generator: Adobe Illustrator 29.5.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 141)  -->
-  <defs>
-    <style>
-      .st0 {
-        fill: #fffcc9;
-        stroke: aqua;
-      }
+        <path d="M3.00006 30.4668L307.294 30.4668V3.4524L3.00006 3.4524V30.4668Z" fill="#FFCAC8" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
 
-      .st0, .st1, .st2, .st3, .st4, .st5 {
-        stroke-miterlimit: 10;
-      }
+        <g id="close">
+          <path d="M11.003 24.7108L33.5639 24.7108V9.21324L11.003 9.21324L11.003 24.7108Z" fill="#FFC7C8"
+            stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 9.20837L10.9969 24.7059" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 24.7059L10.9969 9.20837" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+        </g>
 
-      .st1 {
-        fill: #ffc7c8;
-      }
+        <path d="M3.00006 386.099L307.294 386.099V239.1L3.00006 239.1V386.099Z" fill="#DFE0FF" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
 
-      .st1, .st2, .st3, .st4, .st5 {
-        stroke-width: 6px;
-      }
+        <svg x="10%" y="72%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones" id="chat-fase2"
+            d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z"
+            fill="#FDFFE5" />
 
-      .st1, .st3 {
-        stroke: #7ef1ff;
-      }
+          <text x="50%" y="45%" font-family="Poppins" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            Iniciar el asistente virtual
+          </text>
+        </svg>
+      </svg>
+    </div>
+    <div id="chat-2" class="chat" data-click-count="0">
+      <svg width="100%" height="100%" viewBox="0 0 311 390" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 239L307 239L307 30L3 30L3 239Z" fill="#FFDFE0" stroke="#C7F1FF" stroke-width="6"
+          stroke-miterlimit="10" />
 
-      .st2 {
-        fill: url(#Degradado_sin_nombre);
-      }
+        <path d="M3.00006 30.4668L307.294 30.4668V3.4524L3.00006 3.4524V30.4668Z" fill="#FFCAC8" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
 
-      .st2, .st4, .st5 {
-        stroke: #67f1ff;
-      }
+        <g id="close">
+          <path d="M11.003 24.7108L33.5639 24.7108V9.21324L11.003 9.21324L11.003 24.7108Z" fill="#FFC7C8"
+            stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 9.20837L10.9969 24.7059" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 24.7059L10.9969 9.20837" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+        </g>
 
-      .st3 {
-        fill: none;
-      }
+        <path d="M3.00006 386.099L307.294 386.099V239.1L3.00006 239.1V386.099Z" fill="#DFE0FF" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
 
-      .st4 {
-        fill: url(#Degradado_sin_nombre_2);
-      }
+        <svg x="10%" y="15%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones"
+            d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z"
+            fill="#FDFFE5" />
 
-      .st6, .st7 {
-        isolation: isolate;
-      }
+          <text x="50%" y="45%" font-family="Poppins" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            Iniciar el asistente virtual
+          </text>
+        </svg>
+        <svg x="10%" y="72%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones"
+            d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z"
+            fill="#FDFFE5" />
 
-      .st5 {
-        fill: #eab0b0;
-      }
+          <text x="50%" y="45%" font-family="Poppins" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            Mucho gusto
+          </text>
+        </svg>
+        <svg x="10%" y="35%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones" d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z" fill="#E4D4FF" transform="scale(-1,1) translate(-243,0)"/>
 
-      .st7 {
-        font-family: ArialMT, Arial;
-        font-size: 24px;
-      }
-    </style>
-    <linearGradient id="Degradado_sin_nombre" data-name="Degradado sin nombre" x1="349.36" y1="2694.97" x2="851.64" y2="2694.97" gradientTransform="translate(0 3084) scale(1 -1)" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#884076"/>
-      <stop offset="1" stop-color="#ffe5e5"/>
-    </linearGradient>
-    <linearGradient id="Degradado_sin_nombre_2" data-name="Degradado sin nombre 2" x1="349.36" y1="-1307.07" x2="851.64" y2="-1307.07" gradientTransform="translate(0 2060)" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#dfe0ff"/>
-      <stop offset=".37" stop-color="#e0ddfb"/>
-      <stop offset="1" stop-color="#eab0b0"/>
-      <stop offset="1" stop-color="#ffe5e5"/>
-    </linearGradient>
-  </defs>
-  <rect class="st2" x="349.36" y="179.62" width="502.28" height="418.82"/>
-  <rect class="st5" x="349.36" y="120.78" width="502.28" height="55.24"/>
-  <rect class="st1" x="362.57" y="132.56" width="37.24" height="31.69"/>
-  <line class="st3" x1="399.8" y1="132.55" x2="362.56" y2="164.24"/>
-  <line class="st3" x1="399.8" y1="164.24" x2="362.56" y2="132.55"/>
-  <rect class="st4" x="349.36" y="602.64" width="502.28" height="300.59"/>
-  <path class="st0" d="M834.17,800.56l-22.45-29.19c2.48-2.61,3.86-5.45,3.86-8.42v-34.58c0-12.73-25.02-23.06-55.89-23.06h-284.12c-30.87,0-55.89,10.32-55.89,23.06v34.58c0,12.73,25.02,23.06,55.89,23.06h284.12c1.65,0,3.29-.04,4.91-.09l69.57,14.64h0Z"/>
-              <g class="st6">
-                <text class="st7" transform="translate(503.39 752.93)"><tspan x="0" y="0">Inciar asistente virtual</tspan></text>
-              </g>
+          <text x="50%" y="45%" font-family="Poppins" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            Hola, soy tu asistente virtual
+          </text>
+        </svg>
+      </svg>
+    </div>
+    <div id="chat-3" class="chat" data-click-count="0">
+      <svg width="100%" height="100%" viewBox="0 0 311 390" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 239L307 239L307 30L3 30L3 239Z" fill="#FFDFE0" stroke="#C7F1FF" stroke-width="6"
+          stroke-miterlimit="10" />
 
-</svg>
+        <path d="M3.00006 30.4668L307.294 30.4668V3.4524L3.00006 3.4524V30.4668Z" fill="#FFCAC8" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
 
-        <!-- Flores -->
-          <div class="rosa-fase1" id="R1-F1"><img src="Imagenes/etapa2/rosa1.svg"></div>
-          <div class="rosa-fase1" id="R2-F1"><img src="Imagenes/etapa2/rosa1.svg"></div>
-          <div class="rosa-fase1" id="R3-F1"><img src="Imagenes/etapa2/rosa1.svg"></div>
-          <div class="rosa-fase1" id="R4-F1"><img src="Imagenes/etapa2/rosa1.svg"></div>
-          <div class="rosa-fase1" id="R5-F1"><img src="Imagenes/etapa2/rosa1.svg"></div>
-          <div class="rosa-fase1" id="R6-F1"><img src="Imagenes/etapa2/rosa1.svg"></div>
-        </div> 
+        <g id="close">
+          <path d="M11.003 24.7108L33.5639 24.7108V9.21324L11.003 9.21324L11.003 24.7108Z" fill="#FFC7C8"
+            stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 9.20837L10.9969 24.7059" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 24.7059L10.9969 9.20837" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+        </g>
 
-  </section>
+        <path d="M3.00006 386.099L307.294 386.099V239.1L3.00006 239.1V386.099Z" fill="#DFE0FF" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
+
+        <svg x="10%" y="35%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones"
+            d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z"
+            fill="#FDFFE5" />
+
+          <text x="50%" y="45%" font-family="Poppins" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            Mucho gusto
+          </text>
+        </svg>
+        <svg x="10%" y="15%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones" d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z" fill="#E4D4FF" transform="scale(-1,1) translate(-243,0)"/>
+
+          <text x="50%" y="45%" font-family="Poppins" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            Hola, soy tu asistente virtual
+          </text>
+        </svg>
+      </svg>
+    </div>
+    <div id="chat-4" class="chat" data-click-count="0">
+      <svg width="100%" height="100%" viewBox="0 0 311 390" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 239L307 239L307 30L3 30L3 239Z" fill="#FFDFE0" stroke="#C7F1FF" stroke-width="6"
+          stroke-miterlimit="10" />
+
+        <path d="M3.00006 30.4668L307.294 30.4668V3.4524L3.00006 3.4524V30.4668Z" fill="#FFCAC8" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
+
+        <g id="close">
+          <path d="M11.003 24.7108L33.5639 24.7108V9.21324L11.003 9.21324L11.003 24.7108Z" fill="#FFC7C8"
+            stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 9.20837L10.9969 24.7059" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 24.7059L10.9969 9.20837" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+        </g>
+
+        <path d="M3.00006 386.099L307.294 386.099V239.1L3.00006 239.1V386.099Z" fill="#DFE0FF" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
+
+        <svg x="10%" y="15%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones"
+            d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z"
+            fill="#FDFFE5" />
+
+          <text x="50%" y="45%" font-family="Poppins" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            Mucho gusto
+          </text>
+        </svg>
+        <svg x="10%" y="64%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones"
+            d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z"
+            fill="#FDFFE5" />
+
+          <text x="50%" y="45%" font-family="Rubik Glitch" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            Bueno, muchas gracias
+          </text>
+        </svg>
+        <svg x="10%" y="81%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones"
+            d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z"
+            fill="#FDFFE5" />
+
+          <text x="50%" y="45%" font-family="Poppins" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            Esta bien
+          </text>
+        </svg>
+        <svg x="10%" y="35%" width="80%" height="75" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones" d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z" fill="#E4D4FF" transform="scale(-1,1) translate(-243,0)"/>
+
+          <text x="50%" y="45%" font-family="Poppins" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            <tspan x="50%" dy="-10">Te voy a poner un poco de </tspan> 
+            <tspan x="50%" dy="20">musica relajante</tspan>
+          </text>
+        </svg>
+      </svg>
+    </div>
+    <div id="chat-5" class="chat" data-click-count="0">
+      <svg width="100%" height="100%" viewBox="0 0 311 390" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 239L307 239L307 30L3 30L3 239Z" fill="#FFDFE0" stroke="#C7F1FF" stroke-width="6"
+          stroke-miterlimit="10" />
+
+        <path d="M3.00006 30.4668L307.294 30.4668V3.4524L3.00006 3.4524V30.4668Z" fill="#FFCAC8" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
+
+        <g id="close">
+          <path d="M11.003 24.7108L33.5639 24.7108V9.21324L11.003 9.21324L11.003 24.7108Z" fill="#FFC7C8"
+            stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 9.20837L10.9969 24.7059" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 24.7059L10.9969 9.20837" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+        </g>
+
+        <path d="M3.00006 386.099L307.294 386.099V239.1L3.00006 239.1V386.099Z" fill="#DFE0FF" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
+
+        <svg x="10%" y="35%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones"
+            d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z"
+            fill="#FDFFE5" />
+
+          <text x="50%" y="45%" font-family="Poppins" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            Opción seleccionada
+          </text>
+        </svg>
+        <svg x="10%" y="15%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones" d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z" fill="#E4D4FF" transform="scale(-1,1) translate(-243,0)"/>
+
+          <text x="50%" y="45%" font-family="Poppins" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            <tspan x="50%" dy="-10">Te voy a poner un poco de </tspan> 
+            <tspan x="50%" dy="20">musica relajante</tspan>
+          </text>
+        </svg>
+      </svg>
+    </div>
+    <div id="chat-6" class="chat" data-click-count="0">
+      <svg width="100%" height="100%" viewBox="0 0 311 390" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 239L307 239L307 30L3 30L3 239Z" fill="#FFDFE0" stroke="#C7F1FF" stroke-width="6"
+          stroke-miterlimit="10" />
+
+        <path d="M3.00006 30.4668L307.294 30.4668V3.4524L3.00006 3.4524V30.4668Z" fill="#FFCAC8" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
+
+        <g id="close">
+          <path d="M11.003 24.7108L33.5639 24.7108V9.21324L11.003 9.21324L11.003 24.7108Z" fill="#FFC7C8"
+            stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 9.20837L10.9969 24.7059" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 24.7059L10.9969 9.20837" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+        </g>
+
+        <path d="M3.00006 386.099L307.294 386.099V239.1L3.00006 239.1V386.099Z" fill="#DFE0FF" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
+
+        <svg x="10%" y="15%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones"
+            d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z"
+            fill="#FDFFE5" />
+
+          <text x="50%" y="45%" font-family="Poppins" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            Opción seleccionada
+          </text>
+        </svg>
+        <svg x="10%" y="64%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones"
+            d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z"
+            fill="#FDFFE5" />
+
+          <text x="50%" y="45%" font-family="Rubik Glitch" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            Para porfavor
+          </text>
+        </svg>
+        <svg x="10%" y="81%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones"
+            d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z"
+            fill="#FDFFE5" onclick="setTimeout(() => window.location.href='etapa3.html', 2000)" />
+
+          <text x="50%" y="45%" font-family="Rubik Glitch" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle" onclick="setTimeout(() => window.location.href='etapa3.html', 2000)">
+            .-.-.-.
+          </text>
+        </svg>
+        <svg x="10%" y="35%" width="80%" height="75" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones" d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z" fill="#E4D4FF" transform="scale(-1,1) translate(-243,0)"/>
+
+          <text x="50%" y="45%" font-family="Rubik glitch" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            No, es mejor el rock
+          </text>
+        </svg>
+      </svg>
+    </div>
+    <div id="chat-7" class="chat" data-click-count="0">
+      <svg width="100%" height="100%" viewBox="0 0 311 390" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 239L307 239L307 30L3 30L3 239Z" fill="#FFDFE0" stroke="#C7F1FF" stroke-width="6"
+          stroke-miterlimit="10" />
+
+        <path d="M3.00006 30.4668L307.294 30.4668V3.4524L3.00006 3.4524V30.4668Z" fill="#FFCAC8" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
+
+        <g id="close">
+          <path d="M11.003 24.7108L33.5639 24.7108V9.21324L11.003 9.21324L11.003 24.7108Z" fill="#FFC7C8"
+            stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 9.20837L10.9969 24.7059" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 24.7059L10.9969 9.20837" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+        </g>
+
+        <path d="M3.00006 386.099L307.294 386.099V239.1L3.00006 239.1V386.099Z" fill="#DFE0FF" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
+
+        <svg x="10%" y="35%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones"
+            d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z"
+            fill="#FDFFE5" />
+
+          <text x="50%" y="45%" font-family="Poppins" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            Opción seleccionada
+          </text>
+        </svg>
+        <svg x="10%" y="15%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones" d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z" fill="#E4D4FF" transform="scale(-1,1) translate(-243,0)"/>
+
+          <text x="50%" y="45%" font-family="Poppins" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            <tspan x="50%" dy="-10">No, mejor necesitamos algo </tspan> 
+            <tspan x="50%" dy="20">más movido</tspan>
+          </text>
+        </svg>
+      </svg>
+    </div>
+    <div id="chat-8" class="chat" data-click-count="0">
+      <svg width="100%" height="100%" viewBox="0 0 311 390" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 239L307 239L307 30L3 30L3 239Z" fill="#FFDFE0" stroke="#C7F1FF" stroke-width="6"
+          stroke-miterlimit="10" />
+
+        <path d="M3.00006 30.4668L307.294 30.4668V3.4524L3.00006 3.4524V30.4668Z" fill="#FFCAC8" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
+
+        <g id="close">
+          <path d="M11.003 24.7108L33.5639 24.7108V9.21324L11.003 9.21324L11.003 24.7108Z" fill="#FFC7C8"
+            stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 9.20837L10.9969 24.7059" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 24.7059L10.9969 9.20837" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+        </g>
+
+        <path d="M3.00006 386.099L307.294 386.099V239.1L3.00006 239.1V386.099Z" fill="#DFE0FF" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
+
+        <svg x="10%" y="15%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones"
+            d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z"
+            fill="#FDFFE5" />
+
+          <text x="50%" y="45%" font-family="Poppins" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            Opción seleccionada
+          </text>
+        </svg>
+        <svg x="10%" y="64%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones"
+            d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z"
+            fill="#FDFFE5" />
+
+          <text x="50%" y="45%" font-family="Rubik Glitch" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            Para porfavor
+          </text>
+        </svg>
+        <svg x="10%" y="81%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones"
+            d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z"
+            fill="#FDFFE5" />
+
+          <text x="50%" y="45%" font-family="Rubik Glitch" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            Mejor sin musica
+          </text>
+        </svg>
+        <svg x="10%" y="35%" width="80%" height="75" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones" d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z" fill="#E4D4FF" transform="scale(-1,1) translate(-243,0)"/>
+
+          <text x="50%" y="45%" font-family="Rubik glitch" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            No, es mejor el rock
+          </text>
+        </svg>
+      </svg>
+    </div>
+    <div id="chat-9" class="chat" data-click-count="0">
+      <svg width="100%" height="100%" viewBox="0 0 311 390" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 239L307 239L307 30L3 30L3 239Z" fill="#FFDFE0" stroke="#C7F1FF" stroke-width="6"
+          stroke-miterlimit="10" />
+
+        <path d="M3.00006 30.4668L307.294 30.4668V3.4524L3.00006 3.4524V30.4668Z" fill="#FFCAC8" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
+
+        <g id="close">
+          <path d="M11.003 24.7108L33.5639 24.7108V9.21324L11.003 9.21324L11.003 24.7108Z" fill="#FFC7C8"
+            stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 9.20837L10.9969 24.7059" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 24.7059L10.9969 9.20837" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+        </g>
+
+        <path d="M3.00006 386.099L307.294 386.099V239.1L3.00006 239.1V386.099Z" fill="#DFE0FF" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
+
+        <svg x="10%" y="35%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones"
+            d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z"
+            fill="#FDFFE5" />
+
+          <text x="50%" y="45%" font-family="Rubik Glitch" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            Opción seleccionada
+          </text>
+        </svg>
+        <svg x="10%" y="15%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones" d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z" fill="#E4D4FF" transform="scale(-1,1) translate(-243,0)"/>
+
+          <text x="50%" y="45%" font-family="Rubik Glitch" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            No, es mejor el rock
+          </text>
+        </svg>
+      </svg>
+    </div>
+    <div id="chat-10" class="chat" data-click-count="0">
+      <svg width="100%" height="100%" viewBox="0 0 311 390" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 239L307 239L307 30L3 30L3 239Z" fill="#FFDFE0" stroke="#C7F1FF" stroke-width="6"
+          stroke-miterlimit="10" />
+
+        <path d="M3.00006 30.4668L307.294 30.4668V3.4524L3.00006 3.4524V30.4668Z" fill="#FFCAC8" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
+
+        <g id="close">
+          <path d="M11.003 24.7108L33.5639 24.7108V9.21324L11.003 9.21324L11.003 24.7108Z" fill="#FFC7C8"
+            stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 9.20837L10.9969 24.7059" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 24.7059L10.9969 9.20837" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+        </g>
+
+        <path d="M3.00006 386.099L307.294 386.099V239.1L3.00006 239.1V386.099Z" fill="#DFE0FF" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
+
+        <svg x="10%" y="35%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones"
+            d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z"
+            fill="#FDFFE5" />
+
+          <text x="50%" y="45%" font-family="Rubik Glitch" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            Opción seleccionada
+          </text>
+        </svg>
+        <svg x="10%" y="15%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones" d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z" fill="#E4D4FF" transform="scale(-1,1) translate(-243,0)"/>
+
+          <text x="50%" y="45%" font-family="Rubik Glitch" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            No, es mejor el rock
+          </text>
+        </svg>
+        <svg x="10%" y="64%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones"
+            d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z"
+            fill="#FDFFE5" />
+
+          <text x="50%" y="45%" font-family="Rubik Glitch" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            .-.-.-.
+          </text>
+        </svg>
+        <svg x="10%" y="81%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones"
+            d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z"
+            fill="#FDFFE5" onclick="setTimeout(() => window.location.href='etapa3.html', 2000)" />
+
+          <text x="50%" y="45%" font-family="Rubik Glitch" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle" onclick="setTimeout(() => window.location.href='etapa3.html', 2000)">
+            .-.-.-.
+          </text>
+        </svg>
+      </svg>
+    </div>
+    <div id="chat-11" class="chat" data-click-count="0">
+      <svg width="100%" height="100%" viewBox="0 0 311 390" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 239L307 239L307 30L3 30L3 239Z" fill="#FFDFE0" stroke="#C7F1FF" stroke-width="6"
+          stroke-miterlimit="10" />
+
+        <path d="M3.00006 30.4668L307.294 30.4668V3.4524L3.00006 3.4524V30.4668Z" fill="#FFCAC8" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
+
+        <g id="close">
+          <path d="M11.003 24.7108L33.5639 24.7108V9.21324L11.003 9.21324L11.003 24.7108Z" fill="#FFC7C8"
+            stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 9.20837L10.9969 24.7059" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M33.5578 24.7059L10.9969 9.20837" stroke="#C7F1FF" stroke-width="3" stroke-miterlimit="10" />
+        </g>
+
+        <path d="M3.00006 386.099L307.294 386.099V239.1L3.00006 239.1V386.099Z" fill="#DFE0FF" stroke="#C7F1FF"
+          stroke-width="6" stroke-miterlimit="10" />
+        <svg x="10%" y="64%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones"
+            d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z"
+            fill="#FDFFE5" />
+
+          <text x="50%" y="45%" font-family="Rubik Glitch" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            .-.-.-.
+          </text>
+        </svg>
+        <svg x="10%" y="81%" width="80%" height="65" viewBox="0 0 243 65" preserveAspectRatio="xMidYMid meet">
+          <path class="opciones"
+            d="M243 65L235.688 45.08C236.496 43.299 236.945 41.364 236.945 39.331V15.736C236.945 7.045 228.797 0 218.741 0H18.204C8.149 0 0 7.045 0 15.736V39.331C0 48.023 8.149 55.068 18.204 55.068H218.741C219.28 55.068 219.813 55.042 220.34 55.006L243 65Z"
+            fill="#FDFFE5" />
+
+          <text x="50%" y="45%" font-family="Rubik Glitch" font-size="14" fill="#000" text-anchor="middle"
+            dominant-baseline="middle">
+            .-.-.-.
+          </text>
+        </svg>
+      </svg>
+    </div>
+    <img class="rosa" id="rosa1" src="/Imagenes/etapa1/rosa.svg" width="100px" />
+    <img class="rosa" id="rosa2" src="/Imagenes/etapa1/rosa.svg" width="100px" />
+    <img class="rosa" id="rosa3" src="/Imagenes/etapa1/rosa.svg" width="100px" />
+    <img class="rosa" id="rosa4" src="/Imagenes/etapa1/rosa.svg" width="100px" />
+    <img class="rosa" id="rosa5" src="/Imagenes/etapa1/rosa.svg" width="100px" />
+    <img class="rosa" id="rosa6" src="/Imagenes/etapa1/rosa.svg" width="100px" />
+  </div>
+</section>
 </body>
 </html>
