@@ -106,15 +106,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     function cambiarMusica(src) {
-        const audio = document.getElementById("musica");
-        if (src) {
-            audio.src = src;
-            audio.play();
-        } else {
-            audio.pause();
-            audio.src = "";
-        }
+    const audio = document.getElementById("musica");
+    if (!audio) {
+        console.error("Elemento de audio no encontrado");
+        return;
     }
+    
+    // Pausar y resetear primero
+    audio.pause();
+    audio.currentTime = 0;
+    
+    if (src) {
+        // Asegúrate de que la ruta comience con /
+        const fullSrc = src.startsWith('/') ? src : `/${src}`;
+        audio.src = fullSrc;
+        
+        // Esperar a que el audio pueda reproducirse
+        audio.load(); // Forzar carga
+        audio.play().catch(error => {
+            console.error("Error al reproducir audio:", error);
+            // Mostrar un botón de activación si es necesario
+            document.body.addEventListener('click', () => audio.play(), { once: true });
+        });
+    }
+}
 
     function reemplazarTexto(elemento, textoAnterior, textoNuevo) {
         console.log("Intentando reemplazar:", {
@@ -225,11 +240,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             if (numeroChat === 3) {
-                cambiarMusica("/audios/relax.mp3");
-            } else if (numeroChat === 6) {
-                cambiarMusica("/audios/rock.mp3");
-            } else if (numeroChat === 8) {
-                cambiarMusica(null);
+                cambiarMusica("/audios/relax.wav");
+            } else if (numeroChat === 5) {
+                cambiarMusica("/audios/rock.wav");
+            } else if (numeroChat === 10) {
+                cambiarMusica("/audios/pitido.wav");
             }
 
 
