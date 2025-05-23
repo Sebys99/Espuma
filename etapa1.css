@@ -1,7 +1,7 @@
 :root {
     --heightChat: 400px;
     --widthChat: 300px;
-    --tamanioRosa: 100px;
+    --tamanioRosa: calc( var(--heightChat) / 4 );
 }
 
 *,
@@ -112,9 +112,23 @@ body {
     --widthChat: 600px;
     --tamanioRosa: 200px;
     }
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
 
 }
 
 @media screen and (pointer: coarse) {
+  :root {
+    --heightChat: 300px;
+    --widthChat: 200px;
+  }
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
 
 }
