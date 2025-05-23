@@ -1,3 +1,8 @@
+  :root {
+  --chat-width: 90%;
+  --chat-height: 90%;
+}
+  
   body {
     background-color: rgba(83, 39, 72, 0.83);
     height: 100vh;
@@ -23,8 +28,8 @@
 
 
   .chat-fase-1 {
-    width: 100%;
-    height: 100%;
+    width: var(--chat-width);
+    height: var(--chat-height);
     max-width: 100vw;
     max-height: 100vh;
     margin: 0;
@@ -60,15 +65,16 @@
   .spike5-fase-1,
   .spike6-fase-1 {
     position: absolute;
-    width: 19%;
+    width: 15%;
     height: auto;
     z-index: -1;
+    transform-origin: center center;
     display: none;
   }
 
   .spike1-fase-1 {
     top: 2%;
-    left: 0%;
+    left: 17%;
     --rot: -27deg;
     transform: rotate(var(--rot));
   }
@@ -85,7 +91,7 @@
 
   .spike2-fase-1 {
     top: 3%;
-    left: 30%;
+    right: 6%;
     --rot: -13deg;
     transform: rotate(var(--rot));
   }
@@ -102,7 +108,7 @@
 
   .spike3-fase-1 {
     top: 40%;
-    right: 55%;
+    left: 6%;
     --rot: 0deg;
     transform: rotate(var(--rot));
     animation: spike-glitch 0.3s infinite linear;
@@ -110,14 +116,14 @@
 
   .spike4-fase-1 {
     top: 50%;
-    right: 15%;
+    right: 28%;
     --rot: 10deg;
     transform: rotate(var(--rot));
   }
 
   .spike5-fase-1 {
     top: 69%;
-    left: 21%;
+    left: 29%;
     --rot: 12deg;
     transform: rotate(var(--rot));
   }
@@ -134,7 +140,7 @@
 
   .spike6-fase-1 {
     top: 70%;
-    left: 46%;
+    right: 5%;
     --rot: 90deg;
     transform: rotate(var(--rot));
   }
@@ -156,15 +162,16 @@
   .spike5-fase-2,
   .spike6-fase-2 {
     position: absolute;
-    width: 19%;
+    width: 15%;
     height: auto;
     z-index: -1;
+    transform-origin: center center;
     display: none;
   }
 
   .spike1-fase-2 {
     top: 2%;
-    left: 0%;
+    left: 17%;
     --rot: -27deg;
     transform: rotate(var(--rot));
   }
@@ -181,7 +188,7 @@
 
   .spike2-fase-2 {
     top: 3%;
-    left: 97%;
+    right: 6%;
     --rot: -13deg;
     transform: rotate(var(--rot));
   }
@@ -198,7 +205,7 @@
 
   .spike3-fase-2 {
     top: 40%;
-    right: 95%;
+    left: 6%;
     --rot: 0deg;
     transform: rotate(var(--rot));
   }
@@ -214,7 +221,7 @@
 
   .spike4-fase-2 {
     top: 50%;
-    right: 15%;
+    right: 28%;
     --rot: 10deg;
     transform: rotate(var(--rot));
   }
@@ -230,7 +237,7 @@
 
   .spike5-fase-2 {
     top: 69%;
-    left: 21%;
+    left: 29%;
     --rot: 12deg;
     transform: rotate(var(--rot));
   }
@@ -247,7 +254,7 @@
 
   .spike6-fase-2 {
     top: 70%;
-    left: 100%;
+    right: 5%;
     --rot: 90deg;
     transform: rotate(var(--rot));
   }
@@ -269,15 +276,16 @@
   .spike5-fase-3,
   .spike6-fase-3 {
     position: absolute;
-    width: 19%;
+    width: 15%;
     height: auto;
     z-index: -1;
+    transform-origin: center center;
     display: none;
   }
 
   .spike1-fase-3 {
     top: 2%;
-    left: 0%;
+    left: 17%;
     --rot: -27deg;
     transform: rotate(var(--rot));
   }
@@ -294,7 +302,7 @@
 
   .spike2-fase-3 {
     top: 3%;
-    left: 97%;
+    right: 6%;
     --rot: -13deg;
     transform: rotate(var(--rot));
   }
@@ -311,7 +319,7 @@
 
   .spike3-fase-3 {
     top: 40%;
-    right: 95%;
+    left: 6%;
     --rot: 0deg;
     transform: rotate(var(--rot));
   }
@@ -327,7 +335,7 @@
 
   .spike4-fase-3 {
     top: 50%;
-    right: 15%;
+    right: 28%;
     --rot: 10deg;
     transform: rotate(var(--rot));
   }
@@ -343,7 +351,7 @@
 
   .spike5-fase-3 {
     top: 69%;
-    left: 21%;
+    left: 29%;
     --rot: 12deg;
     transform: rotate(var(--rot));
   }
@@ -361,7 +369,7 @@
 
   .spike6-fase-3 {
     top: 70%;
-    left: 100%;
+    right: 5%;
     --rot: 90deg;
     transform: rotate(var(--rot));
   }
@@ -376,6 +384,810 @@
     mix-blend-mode: screen;
   }
 
+
+  .spike {
+    width: 15%;
+    height: auto;
+    z-index: -1;
+    position: absolute;
+    display: none; /* para ocultarlas en otras fases */
+    transform-origin: center center;
+  }
+
+  /* -------------------------------------------------- TABLETS ----------------------------------------------- */	
+
+
+@media (max-width: 1950px) {
+      :root {
+  --chat-width: 90%;
+  --chat-height: 90%;
+}
+  
+  body {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  main {
+    width: 100%;               /* Escala con el viewport */
+    max-width: 100%;         /* No se agranda más allá de 1000px */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+  .chat-fase-1 {
+    width: var(--chat-width);
+    height: var(--chat-height);
+    max-width: 100vw;
+    max-height: 100vh;
+    margin: 0;
+  }
+
+  .chat-fase-1 svg {
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
+    display: block;
+  }
+
+  .st10 {
+  font-family: 'Rubik Glitch';
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  font-size: 1.4em;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  /* -------------------------------------------------- FASE 1----------------------------------------------- */	
+  .spike1-fase-1,
+  .spike2-fase-1,
+  .spike3-fase-1,
+  .spike4-fase-1,
+  .spike5-fase-1,
+  .spike6-fase-1 {
+    position: absolute;
+    width: 15%;
+    height: auto;
+    z-index: -1;
+    transform-origin: center center;
+    display: none;
+  }
+
+  .spike1-fase-1 {
+    top: 2%;
+    left: 13%;
+    --rot: -27deg;
+    transform: rotate(var(--rot));
+  }
+
+
+  .spike1-fase-1 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 3s infinite linear,
+    spike-color-cycle 3s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike2-fase-1 {
+    top: 3%;
+    right: 6%;
+    --rot: -13deg;
+    transform: rotate(var(--rot));
+  }
+
+
+  .spike2-fase-1 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 1s infinite linear,
+    spike-color-cycle 1s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike3-fase-1 {
+    top: 40%;
+    left: 6%;
+    --rot: 0deg;
+    transform: rotate(var(--rot));
+    animation: spike-glitch 0.3s infinite linear;
+  }
+
+  .spike4-fase-1 {
+    top: 50%;
+    right: 24%;
+    --rot: 10deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike5-fase-1 {
+    top: 71%;
+    left: 25%;
+    --rot: 12deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike5-fase-1 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 5s infinite linear,
+    spike-color-cycle 5s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+
+  .spike6-fase-1 {
+    top: 76%;
+    right: 5%;
+    --rot: 90deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike6-fase-1 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 3s infinite linear,
+    spike-color-cycle 3s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  /* -------------------------------------------------- FASE 2----------------------------------------------- */
+  .spike1-fase-2,
+  .spike2-fase-2,
+  .spike3-fase-2,
+  .spike4-fase-2,
+  .spike5-fase-2,
+  .spike6-fase-2 {
+    position: absolute;
+    width: 15%;
+    height: auto;
+    z-index: -1;
+    transform-origin: center center;
+    display: none;
+  }
+
+  .spike1-fase-2 {
+    top: 2%;
+    left: 13%;
+    --rot: -27deg;
+    transform: rotate(var(--rot));
+  }
+
+
+  .spike1-fase-2 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-color-cycle-fase2 3s infinite linear,
+    rotarYglitchear 10s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike2-fase-2 {
+    top: 3%;
+    right: 6%;
+    --rot: -13deg;
+    transform: rotate(var(--rot));
+  }
+
+
+  .spike2-fase-2 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval-fase2 1s infinite linear,
+    spike-color-cycle-fase2 1s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike3-fase-2 {
+    top: 40%;
+    left: 6%;
+    --rot: 0deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike3-fase-2 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 0.3s infinite linear,
+    spike-color-cycle 0.3s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike4-fase-2 {
+    top: 50%;
+    right: 24%;
+    --rot: 10deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike4-fase-2 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval-fase2 1s infinite linear,
+    spike-color-cycle-fase2 1s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike5-fase-2 {
+    top: 71%;
+    left: 25%;
+    --rot: 12deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike5-fase-2 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval-fase2 5s infinite linear,
+    spike-color-cycle-fase2 5s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+
+  .spike6-fase-2 {
+    top: 76%;
+    right: 5%;
+    --rot: 90deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike6-fase-2 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval-fase2 3s infinite linear,
+    spike-color-cycle-fase2 3s infinite linear,
+    rotarYglitchear-reversa 10s infinite linear;
+    mix-blend-mode: screen;
+  }
+  /* -------------------------------------------------- FASE 3----------------------------------------------- */
+  .spike1-fase-3,
+  .spike2-fase-3,
+  .spike3-fase-3,
+  .spike4-fase-3,
+  .spike5-fase-3,
+  .spike6-fase-3 {
+    position: absolute;
+    width: 15%;
+    height: auto;
+    z-index: -1;
+    transform-origin: center center;
+    display: none;
+  }
+
+  .spike1-fase-3 {
+    top: 2%;
+    left: 13%;
+    --rot: -27deg;
+    transform: rotate(var(--rot));
+  }
+
+
+  .spike1-fase-3 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-color-cycle-fase2 1.5s infinite linear,
+    rotarYglitchear 5s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike2-fase-3 {
+    top: 3%;
+    right: 6%;
+    --rot: -13deg;
+    transform: rotate(var(--rot));
+  }
+
+
+  .spike2-fase-3 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval-fase2 0.6s infinite linear,
+    spike-color-cycle-fase2 0.6s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike3-fase-3 {
+    top: 40%;
+    left: 6%;
+    --rot: 0deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike3-fase-3 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 0.3s infinite linear,
+    spike-color-cycle 0.3s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike4-fase-3 {
+    top: 50%;
+    right: 24%;
+    --rot: 10deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike4-fase-3 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 3s infinite linear,
+    spike-color-cycle 3s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike5-fase-3 {
+    top: 71%;
+    left: 25%;
+    --rot: 12deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike5-fase-3 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 5s infinite linear,
+    spike-color-cycle 5s infinite linear,
+    girar-lento 10s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+
+  .spike6-fase-3 {
+    top: 76%;
+    right: 5%;
+    --rot: 90deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike6-fase-3 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval-fase2 3s infinite linear,
+    spike-color-cycle-fase2 3s infinite linear,
+    rotarYglitchear-reversa 4s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+
+  .spike {
+    width: 15%;
+    height: auto;
+    z-index: -1;
+    position: absolute;
+    display: none; /* para ocultarlas en otras fases */
+    transform-origin: center center;
+  }
+  
+  
+}
+
+
+  /* -------------------------------------------------- CELULARES ----------------------------------------------- */	
+
+
+@media (max-width: 650px) {
+
+      :root {
+  --chat-width: 90%;
+  --chat-height: 90%;
+}
+  
+  body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-fase-1 {
+  width: 90vw;
+  height: 90vh;
+  border: 3px dashed red; /* visual debugging */
+}
+
+.chat-fase-1 svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+  .st10 {
+  font-family: 'Rubik Glitch';
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  font-size: 1.4em;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  /* -------------------------------------------------- FASE 1----------------------------------------------- */	
+  .spike1-fase-1,
+  .spike2-fase-1,
+  .spike3-fase-1,
+  .spike4-fase-1,
+  .spike5-fase-1,
+  .spike6-fase-1 {
+    position: absolute;
+    width: 15%;
+    height: auto;
+    z-index: -1;
+    transform-origin: center center;
+    display: none;
+  }
+
+  .spike1-fase-1 {
+    top: 25%;
+    left: 13%;
+    --rot: -27deg;
+    transform: rotate(var(--rot));
+  }
+
+
+  .spike1-fase-1 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 3s infinite linear,
+    spike-color-cycle 3s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike2-fase-1 {
+    top: 25%;
+    right: 6%;
+    --rot: -13deg;
+    transform: rotate(var(--rot));
+  }
+
+
+  .spike2-fase-1 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 1s infinite linear,
+    spike-color-cycle 1s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike3-fase-1 {
+    top: 40%;
+    left: 6%;
+    --rot: 0deg;
+    transform: rotate(var(--rot));
+    animation: spike-glitch 0.3s infinite linear;
+  }
+
+  .spike4-fase-1 {
+    top: 50%;
+    right: 24%;
+    --rot: 10deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike5-fase-1 {
+    top: 71%;
+    left: 25%;
+    --rot: 12deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike5-fase-1 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 5s infinite linear,
+    spike-color-cycle 5s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+
+  .spike6-fase-1 {
+    top: 76%;
+    right: 5%;
+    --rot: 90deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike6-fase-1 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 3s infinite linear,
+    spike-color-cycle 3s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  /* -------------------------------------------------- FASE 2----------------------------------------------- */
+  .spike1-fase-2,
+  .spike2-fase-2,
+  .spike3-fase-2,
+  .spike4-fase-2,
+  .spike5-fase-2,
+  .spike6-fase-2 {
+    position: absolute;
+    width: 15%;
+    height: auto;
+    z-index: -1;
+    transform-origin: center center;
+    display: none;
+  }
+
+  .spike1-fase-2 {
+    top: 2%;
+    left: 13%;
+    --rot: -27deg;
+    transform: rotate(var(--rot));
+  }
+
+
+  .spike1-fase-2 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-color-cycle-fase2 3s infinite linear,
+    rotarYglitchear 10s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike2-fase-2 {
+    top: 3%;
+    right: 6%;
+    --rot: -13deg;
+    transform: rotate(var(--rot));
+  }
+
+
+  .spike2-fase-2 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval-fase2 1s infinite linear,
+    spike-color-cycle-fase2 1s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike3-fase-2 {
+    top: 40%;
+    left: 6%;
+    --rot: 0deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike3-fase-2 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 0.3s infinite linear,
+    spike-color-cycle 0.3s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike4-fase-2 {
+    top: 50%;
+    right: 24%;
+    --rot: 10deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike4-fase-2 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval-fase2 1s infinite linear,
+    spike-color-cycle-fase2 1s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike5-fase-2 {
+    top: 71%;
+    left: 25%;
+    --rot: 12deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike5-fase-2 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval-fase2 5s infinite linear,
+    spike-color-cycle-fase2 5s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+
+  .spike6-fase-2 {
+    top: 76%;
+    right: 5%;
+    --rot: 90deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike6-fase-2 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval-fase2 3s infinite linear,
+    spike-color-cycle-fase2 3s infinite linear,
+    rotarYglitchear-reversa 10s infinite linear;
+    mix-blend-mode: screen;
+  }
+  /* -------------------------------------------------- FASE 3----------------------------------------------- */
+  .spike1-fase-3,
+  .spike2-fase-3,
+  .spike3-fase-3,
+  .spike4-fase-3,
+  .spike5-fase-3,
+  .spike6-fase-3 {
+    position: absolute;
+    width: 15%;
+    height: auto;
+    z-index: -1;
+    transform-origin: center center;
+    display: none;
+  }
+
+  .spike1-fase-3 {
+    top: 2%;
+    left: 13%;
+    --rot: -27deg;
+    transform: rotate(var(--rot));
+  }
+
+
+  .spike1-fase-3 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-color-cycle-fase2 1.5s infinite linear,
+    rotarYglitchear 5s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike2-fase-3 {
+    top: 3%;
+    right: 6%;
+    --rot: -13deg;
+    transform: rotate(var(--rot));
+  }
+
+
+  .spike2-fase-3 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval-fase2 0.6s infinite linear,
+    spike-color-cycle-fase2 0.6s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike3-fase-3 {
+    top: 40%;
+    left: 6%;
+    --rot: 0deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike3-fase-3 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 0.3s infinite linear,
+    spike-color-cycle 0.3s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike4-fase-3 {
+    top: 50%;
+    right: 24%;
+    --rot: 10deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike4-fase-3 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 3s infinite linear,
+    spike-color-cycle 3s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+  .spike5-fase-3 {
+    top: 71%;
+    left: 25%;
+    --rot: 12deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike5-fase-3 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 5s infinite linear,
+    spike-color-cycle 5s infinite linear,
+    girar-lento 10s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+
+  .spike6-fase-3 {
+    top: 76%;
+    right: 5%;
+    --rot: 90deg;
+    transform: rotate(var(--rot));
+  }
+
+  .spike6-fase-3 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval-fase2 3s infinite linear,
+    spike-color-cycle-fase2 3s infinite linear,
+    rotarYglitchear-reversa 4s infinite linear;
+    mix-blend-mode: screen;
+  }
+
+
+  .spike {
+    width: 15%;
+    height: auto;
+    z-index: -1;
+    position: absolute;
+    display: none; /* para ocultarlas en otras fases */
+    transform-origin: center center;
+  }
+  
+  
+}
 
 
 /* -------------------------------------------------- ADICIONALES ----------------------------------------------- */
@@ -416,14 +1228,6 @@
   }
 
 
-
-  .spike {
-    width: 19%;
-    height: auto;
-    z-index: -1;
-    position: absolute;
-    display: none; /* para ocultarlas en otras fases */
-  }
 
 
 

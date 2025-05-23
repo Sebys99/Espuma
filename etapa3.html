@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/etapa3.css" />
     <script src="/borrow.min.js"></script>
-    <audio id="audio" src="/audios/glitch.mp3" preload="auto"></audio>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -289,132 +288,95 @@
     });
     </script>
 -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
+
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
     const pathBoton = document.getElementById("boton");
-    const audio = document.getElementById("audio");
-    let faseActual = 1;
-    let audioReproducido = false;
-    let fase4Activada = false; // Nueva variable para controlar fase 4
+
+    let faseActual = 1; // Empezamos en fase 1
 
     if (pathBoton) {
-        pathBoton.addEventListener("click", () => {
-            // Si ya estamos en fase 4, no hacer nada
-            if (fase4Activada) return;
-
-            // Reproducir audio solo en el primer click
-            if (!audioReproducido) {
-                audio.play().catch(error => {
-                    console.error("Error al reproducir audio:", error);
-                    document.body.addEventListener('click', () => audio.play(), { once: true });
-                });
-                audioReproducido = true;
-            }
-
-            // Avanzar fase
-            if(faseActual < 4) {
-                faseActual++;
-                const nuevaFase = `fase${faseActual}`;
-                document.body.setAttribute("data-hash", nuevaFase);
-                
-                // Si llegamos a fase 4, marcarlo
-                if (faseActual === 4) {
-                    fase4Activada = true;
-                    // Opcional: deshabilitar visualmente el botón
-                    pathBoton.style.pointerEvents = "none";
-                    pathBoton.style.opacity = "0.5";
-                }
-            }
-        });
+      pathBoton.addEventListener("click", () => {
+        faseActual++; // Avanzamos a la siguiente fase
+        const nuevaFase = `fase${faseActual}`;
+        document.body.setAttribute("data-hash", nuevaFase);
+      });
     }
-});
+  });
 </script>
 
-<script>
-// Variable global para almacenar las posiciones de las spikes
-const spikesPositions = [];
 
-const randomizeSpikesInFase4 = () => {
+<script>
+  const randomizeSpikesInFase4 = () => {
     const body = document.body;
 
     if (body.dataset.hash === "fase4") {
-        // Si ya tenemos posiciones guardadas, usarlas en lugar de generar nuevas
-        if (spikesPositions.length > 0) {
-            spikesPositions.forEach((pos, index) => {
-                const spike = document.querySelectorAll(".spike")[index];
-                if (spike) {
-                    spike.style.position = "absolute";
-                    spike.style.top = `${pos.top}%`;
-                    spike.style.left = `${pos.left}%`;
-                    spike.style.transform = `rotate(${pos.rot}deg) scale(1)`;
-                    spike.style.opacity = "1";
-                    spike.style.display = "block";
-                    spike.style.visibility = "visible";
-                }
-            });
-            return;
-        }
+      const spikes = document.querySelectorAll(".spike");
+      const usedPositions = [];
 
-        const spikes = document.querySelectorAll(".spike");
-        const usedPositions = [];
-        const minDistance = 15;
+      const minDistance = 15; // distancia mínima entre spikes (%)
 
-        spikes.forEach((spike, index) => {
-            let top, left;
-            let attempts = 0;
+      spikes.forEach((spike, index) => {
+        let top, left;
+        let attempts = 0;
 
-            do {
-                top = Math.random() * 80;
-                left = Math.random() * 90;
-                attempts++;
+        do {
+          top = Math.random() * 80;
+          left = Math.random() * 90;
+          attempts++;
 
-                const tooClose = usedPositions.some(pos => {
-                    const dx = pos.left - left;
-                    const dy = pos.top - top;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-                    return distance < minDistance;
-                });
+          const tooClose = usedPositions.some(pos => {
+            const dx = pos.left - left;
+            const dy = pos.top - top;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            return distance < minDistance;
+          });
 
-                if (!tooClose) break;
-            } while (attempts < 100);
+          if (!tooClose) break;
 
-            const rot = Math.floor(Math.random() * 360);
-            usedPositions.push({ top, left, rot });
-            
-            // Guardar posición para futuras repeticiones
-            spikesPositions.push({ top, left, rot });
+        } while (attempts < 100);
 
-            const delay = 500 + index * 600;
+        usedPositions.push({ top, left });
 
-            spike.style.position = "absolute";
-            spike.style.top = `${top}%`;
-            spike.style.left = `${left}%`;
-            spike.style.transform = `rotate(${rot}deg) scale(0.5)`;
-            spike.style.opacity = "0";
-            spike.style.display = "block";
-            spike.style.visibility = "visible";
-            spike.style.transition = "transform 0.4s ease, opacity 0.4s ease";
+        const rot = Math.floor(Math.random() * 360);
+        const delay = 500 + index * 600; // empieza en 0.5s y se suma 0.6s por spike
 
-            setTimeout(() => {
-                spike.style.opacity = "1";
-                spike.style.transform = `rotate(${rot}deg) scale(1)`;
-            }, delay);
-        });
+        spike.style.position = "absolute";
+        spike.style.top = `${top}%`;
+        spike.style.left = `${left}%`;
+        spike.style.transform = `rotate(${rot}deg) scale(0.5)`;
+        spike.style.opacity = "0";
+        spike.style.display = "block";
+        spike.style.visibility = "visible";
+        spike.style.transition = "transform 0.4s ease, opacity 0.4s ease";
+
+        setTimeout(() => {
+          spike.style.opacity = "1";
+          spike.style.transform = `rotate(${rot}deg) scale(1)`;
+        }, delay);
+      });
     }
-};
+  };
 
-const observer = new MutationObserver(() => {
+  // Activar cuando se cambie el data-hash
+  const observer = new MutationObserver(() => {
     if (document.body.dataset.hash === "fase4") {
-        randomizeSpikesInFase4();
+      randomizeSpikesInFase4();
     }
-});
+  });
 
-observer.observe(document.body, {
+  observer.observe(document.body, {
     attributes: true,
     attributeFilter: ['data-hash']
-});
+  });
 
-document.addEventListener("DOMContentLoaded", randomizeSpikesInFase4);
+  // Ejecutar al cargar si ya estás en fase4
+  document.addEventListener("DOMContentLoaded", randomizeSpikesInFase4);
 </script>
+
+
+
+
+    
 </body>
 </html>
