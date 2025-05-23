@@ -5,7 +5,7 @@
 :root {
     --heightChat: 400px;
     --widthChat: 300px;
-    --tamanioRosa: 100px;
+    --tamanioRosa: calc( var(--heightChat) / 4 );
 }
 
 *,
@@ -79,7 +79,6 @@ body{
 .rosa {
     position: absolute;
     width: var(--tamanioRosa);
-    max-width: 150px; /* Límite máximo */
     z-index: 5;
     transform-origin: center;
     transition: all 0.5s ease;
@@ -124,16 +123,18 @@ body{
     bottom: 25%;
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1500px){
     :root {
-        --heightChat: 800px;
-        --widthChat: 600px;
-        --tamanioRosa: 200px;
+    --heightChat: 800px;
+    --widthChat: 600px;
     }
+
 }
 
 @media screen and (pointer: coarse) {
-    .opciones:hover {
-        transform: none;
-    }
+  :root {
+    --heightChat: 900px;
+    --widthChat: 700px;
+  }
 }
+
