@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const progreso = numeroChat / totalChats;
         const numeroRosa = Math.min(Math.ceil(numeroChat / 2), 5);
 
-        const aumentoTamano = 1 + 3 * (numeroRosa - 1);
+        const aumentoTamano = Math.pow(1.2, numeroRosa - 1);
         const nuevoTamano = Math.round(100 * aumentoTamano);
         const nuevoZIndex = 5 + Math.floor(progreso * 15);
 
