@@ -26,15 +26,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.chat {
-    width: var(--widthChat);
-    height: var(--heightChat);
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-
 /* Estado activo del chat */
 .chat[data-click-count="0"] {
     opacity: 1;
@@ -68,11 +59,31 @@ body {
     height: var(--heightChat);
 }
 
+.chat {
+    width: var(--widthChat);
+    height: var(--heightChat);
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 10;
+}
+
+body{
+  transition: background 1.5s linear;
+  background: linear-gradient(to left, #FFDFE0 0%, #FFDFE0 0%);
+}
+
+
+
 .rosa {
     position: absolute;
     width: var(--tamanioRosa);
-    z-index: -1;
+    max-width: 150px; /* Límite máximo */
+    z-index: 5;
     transform-origin: center;
+    transition: all 0.5s ease;
+    pointer-events: none; /* Permite clics a través de las rosas */
 }
 
 /* Rosa arriba */
