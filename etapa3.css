@@ -1,26 +1,40 @@
   body {
     background-color: rgba(83, 39, 72, 0.83);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
   }
 
   main {
-    width: 90vw;               /* Escala con el viewport */
-    max-width: 1000px;         /* No se agranda más allá de 1000px */
+    width: 100%;               /* Escala con el viewport */
+    max-width: 100%;         /* No se agranda más allá de 1000px */
     margin-left: auto;
     margin-right: auto;
-    margin: 0 auto;            /* Centrado horizontal */
-    position: relative;        /* Necesario para posicionar spikes absolutamente dentro */
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
 
   .chat-fase-1 {
-    position: relative;
-    width: 130vw; 
-    max-width: 1060px;
-    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
+    margin: 0;
   }
 
   .chat-fase-1 svg {
     width: 100%;
-    height: auto;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
     display: block;
   }
 
@@ -71,7 +85,7 @@
 
   .spike2-fase-1 {
     top: 3%;
-    left: 97%;
+    left: 30%;
     --rot: -13deg;
     transform: rotate(var(--rot));
   }
@@ -88,7 +102,7 @@
 
   .spike3-fase-1 {
     top: 40%;
-    right: 95%;
+    right: 55%;
     --rot: 0deg;
     transform: rotate(var(--rot));
     animation: spike-glitch 0.3s infinite linear;
@@ -120,7 +134,7 @@
 
   .spike6-fase-1 {
     top: 70%;
-    left: 100%;
+    left: 46%;
     --rot: 90deg;
     transform: rotate(var(--rot));
   }
