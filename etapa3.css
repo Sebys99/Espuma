@@ -50,6 +50,7 @@
     width: 19%;
     height: auto;
     z-index: -1;
+    display: none;
   }
 
   .spike1-fase-1 {
@@ -146,6 +147,7 @@
     height: auto;
     z-index: -1;
     display: none;
+    
   }
 
   .spike1-fase-2 {
@@ -325,6 +327,27 @@
     mix-blend-mode: screen;
   }
 
+
+/* -------------------------------------------------- ADICIONALES ----------------------------------------------- */
+
+
+/* -------------------------------------------------- CAMBIOS DE FASES----------------------------------------------- */
+  body[data-hash=""] #fase1
+  {
+    display: block;
+  }
+
+
+  body[data-hash="fase2"] #fase2
+  {
+    display: block;
+  }
+
+
+  body[data-hash="fase3"] #fase3
+  {
+    display: block;
+  }
 
 /* -------------------------------------------------- ANIMACIONES----------------------------------------------- */
   @keyframes spike-glitch-interval {

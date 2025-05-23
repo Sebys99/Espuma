@@ -1,0 +1,50 @@
+body {
+    background-color:#555856; 
+
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.computadora {
+
+    height: auto;
+    width: 80%;
+ 
+    .st0 {
+      fill: #ffeded;
+    }
+
+    .st1 {
+      fill: #555856;
+    }
+
+    .st1, .st2 {
+      stroke: #1d1d1b;
+      stroke-miterlimit: 10;
+    }
+
+    .st3 {
+      fill: #ffc7c8;
+    }
+
+    .st4 {
+      opacity: .1;
+    }
+
+    .st5 {
+      fill: #a7ffa8;
+    }
+
+    .st6 {
+      fill: #ffc3db;
+    }
+
+    .st7 {
+      fill: #f8a9ab;
+    }
+ 
+}
