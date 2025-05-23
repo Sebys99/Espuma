@@ -362,9 +362,6 @@
     mix-blend-mode: screen;
   }
 
-/* -------------------------------------------------- FASE 4-SPIKES ADICIONALES. ----------------------------------------------- */
-
-
 
 
 /* -------------------------------------------------- ADICIONALES ----------------------------------------------- */
@@ -403,6 +400,17 @@
   .st61 {
     display: none;
   }
+
+
+
+  .spike {
+    width: 19%;
+    height: auto;
+    z-index: -1;
+    position: absolute;
+    display: none; /* para ocultarlas en otras fases */
+  }
+
 
 
 /* -------------------------------------------------- CAMBIOS DE FASES----------------------------------------------- */
@@ -510,11 +518,30 @@
   }
   body[data-hash="fase4"] .spike6-fase-3{
     animation: 
-    spike-glitch-interval-fase2 2.3s infinite linear,
+    spike-glitch-interval-fase2 2.6s infinite linear,
     spike-color-cycle-fase2 2.3s infinite linear,
     rotarYglitchear-reversa 3.2s infinite linear;
   }
 
+
+  body[data-hash="fase4"] #animacion1{
+    animation: 
+    spike-color-cycle-fase2 0.5s infinite linear,
+    rotarYglitchear 2s infinite linear;
+  }
+
+  body[data-hash="fase4"] #animacion2{
+    animation: 
+    spike-glitch-interval-otro 0.3s infinite linear,
+    spike-color-cycle 0.3s infinite linear;
+  }
+
+  body[data-hash="fase4"] #animacion3{
+    animation: 
+    spike-glitch-interval-fase2 2.6s infinite linear,
+    spike-color-cycle-fase2 2.3s infinite linear,
+    rotarYglitchear-reversa 1.2s infinite linear;
+  }
 
 /* -------------------------------------------------- ANIMACIONES----------------------------------------------- */
 /* -------------------------------------------------- FASE 1----------------------------------------------- */
@@ -651,3 +678,12 @@
   100% { transform: translateX(0); }
 }
 
+
+@keyframes spike-glitch-interval-otro {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  2%   { transform: translate(3px, -3px) rotate(0deg); }
+  4%   { transform: translate(-3px, 3px) rotate(0deg); }
+  6%   { transform: translate(4px, 4px) rotate(0deg); }
+  8%   { transform: translate(-4px, -4px) rotate(0deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}

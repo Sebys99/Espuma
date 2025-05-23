@@ -206,6 +206,73 @@
             <img id="Spike 6-1" src="Imagenes/etapa3/spike2-fase3.svg">
         </div>
 
+
+
+        <div class="spike spike1x-fase-4" id="animacion1">
+            <img id="Spike 1-1" src="Imagenes/etapa3/spike1-fase3.svg">
+        </div>
+
+        <div class="spike spike2x-fase-4" id="animacion1">
+            <img id="Spike 1-1" src="Imagenes/etapa3/spike1-fase3.svg">
+        </div>
+
+        <div class="spike spike3x-fase-4" id="animacion1">
+            <img id="Spike 1-1" src="Imagenes/etapa3/spike1-fase3.svg">
+        </div>
+
+        <div class="spike spike4x-fase-4" id="animacion2">
+            <img id="Spike 1-1" src="Imagenes/etapa3/spike1-fase3.svg">
+        </div>
+
+        <div class="spike spike5x-fase-4" id="animacion3">
+            <img id="Spike 1-1" src="Imagenes/etapa3/spike1-fase3.svg">
+        </div>
+
+         <div class="spike spike6x-fase-4" id="animacion1">
+            <img id="Spike 1-1" src="Imagenes/etapa3/spike1-fase3.svg">
+        </div>
+
+        <div class="spike spike7x-fase-4" id="animacion2">
+            <img id="Spike 1-1" src="Imagenes/etapa3/spike1-fase3.svg">
+        </div>
+
+        <div class="spike spike8x-fase-4" id="animacion3">
+            <img id="Spike 1-1" src="Imagenes/etapa3/spike1-fase3.svg">
+        </div>
+
+
+        <div class="spike spike9x-fase-3" id="animacion1">
+            <img id="Spike 6-1" src="Imagenes/etapa3/spike2-fase3.svg">
+        </div>
+        
+        <div class="spike spike10x-fase-3" id="animacion1">
+            <img id="Spike 6-1" src="Imagenes/etapa3/spike2-fase3.svg">
+        </div>
+
+        <div class="spike spike11x-fase-3" id="animacion2">
+            <img id="Spike 6-1" src="Imagenes/etapa3/spike2-fase3.svg">
+        </div>
+
+        <div class="spike spike12x-fase-3" id="animacion2">
+            <img id="Spike 6-1" src="Imagenes/etapa3/spike2-fase3.svg">
+        </div>
+
+        <div class="spike spike12x-fase-3" id="animacion3">
+            <img id="Spike 6-1" src="Imagenes/etapa3/spike2-fase3.svg">
+        </div>
+
+        <div class="spike spike14x-fase-3" id="animacion2">
+            <img id="Spike 6-1" src="Imagenes/etapa3/spike2-fase3.svg">
+        </div>
+
+        <div class="spike spike15x-fase-3" id="animacion2">
+            <img id="Spike 6-1" src="Imagenes/etapa3/spike2-fase3.svg">
+        </div>
+
+        <div class="spike spike16x-fase-3" id="animacion3">
+            <img id="Spike 6-1" src="Imagenes/etapa3/spike2-fase3.svg">
+        </div>
+
     </main>
 
     <!--
@@ -237,6 +304,79 @@
     }
   });
 </script>
+
+
+<script>
+  const randomizeSpikesInFase4 = () => {
+    const body = document.body;
+
+    if (body.dataset.hash === "fase4") {
+      const spikes = document.querySelectorAll(".spike");
+      const usedPositions = [];
+
+      const minDistance = 15; // distancia mínima entre spikes (%)
+
+      spikes.forEach((spike, index) => {
+        let top, left;
+        let attempts = 0;
+
+        do {
+          top = Math.random() * 80;
+          left = Math.random() * 90;
+          attempts++;
+
+          const tooClose = usedPositions.some(pos => {
+            const dx = pos.left - left;
+            const dy = pos.top - top;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            return distance < minDistance;
+          });
+
+          if (!tooClose) break;
+
+        } while (attempts < 100);
+
+        usedPositions.push({ top, left });
+
+        const rot = Math.floor(Math.random() * 360);
+        const delay = 500 + index * 600; // empieza en 0.5s y se suma 0.6s por spike
+
+        spike.style.position = "absolute";
+        spike.style.top = `${top}%`;
+        spike.style.left = `${left}%`;
+        spike.style.transform = `rotate(${rot}deg) scale(0.5)`;
+        spike.style.opacity = "0";
+        spike.style.display = "block";
+        spike.style.visibility = "visible";
+        spike.style.transition = "transform 0.4s ease, opacity 0.4s ease";
+
+        setTimeout(() => {
+          spike.style.opacity = "1";
+          spike.style.transform = `rotate(${rot}deg) scale(1)`;
+        }, delay);
+      });
+    }
+  };
+
+  // Activar cuando se cambie el data-hash
+  const observer = new MutationObserver(() => {
+    if (document.body.dataset.hash === "fase4") {
+      randomizeSpikesInFase4();
+    }
+  });
+
+  observer.observe(document.body, {
+    attributes: true,
+    attributeFilter: ['data-hash']
+  });
+
+  // Ejecutar al cargar si ya estás en fase4
+  document.addEventListener("DOMContentLoaded", randomizeSpikesInFase4);
+</script>
+
+
+
+
     
 </body>
 </html>
