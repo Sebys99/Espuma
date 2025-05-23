@@ -1,6 +1,5 @@
   body {
     background-color: rgba(83, 39, 72, 0.83);
-    /*animation: fondo-animado .5s infinite alternate;*/
   }
 
   main {
@@ -147,7 +146,6 @@
     height: auto;
     z-index: -1;
     display: none;
-    
   }
 
   .spike1-fase-2 {
@@ -162,8 +160,8 @@
     width: 100%;
     height: auto;
     animation: 
-    spike-glitch-interval 3s infinite linear,
-    spike-color-cycle 3s infinite linear;
+    spike-color-cycle-fase2 3s infinite linear,
+    rotarYglitchear 10s infinite linear;
     mix-blend-mode: screen;
   }
 
@@ -179,8 +177,8 @@
     width: 100%;
     height: auto;
     animation: 
-    spike-glitch-interval 1s infinite linear,
-    spike-color-cycle 1s infinite linear;
+    spike-glitch-interval-fase2 1s infinite linear,
+    spike-color-cycle-fase2 1s infinite linear;
     mix-blend-mode: screen;
   }
 
@@ -189,7 +187,15 @@
     right: 95%;
     --rot: 0deg;
     transform: rotate(var(--rot));
-    animation: spike-glitch 0.3s infinite linear;
+  }
+
+  .spike3-fase-2 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 0.3s infinite linear,
+    spike-color-cycle 0.3s infinite linear;
+    mix-blend-mode: screen;
   }
 
   .spike4-fase-2 {
@@ -197,6 +203,15 @@
     right: 15%;
     --rot: 10deg;
     transform: rotate(var(--rot));
+  }
+
+  .spike4-fase-2 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval-fase2 1s infinite linear,
+    spike-color-cycle-fase2 1s infinite linear;
+    mix-blend-mode: screen;
   }
 
   .spike5-fase-2 {
@@ -210,8 +225,8 @@
     width: 100%;
     height: auto;
     animation: 
-    spike-glitch-interval 5s infinite linear,
-    spike-color-cycle 5s infinite linear;
+    spike-glitch-interval-fase2 5s infinite linear,
+    spike-color-cycle-fase2 5s infinite linear;
     mix-blend-mode: screen;
   }
 
@@ -227,8 +242,9 @@
     width: 100%;
     height: auto;
     animation: 
-    spike-glitch-interval 3s infinite linear,
-    spike-color-cycle 3s infinite linear;
+    spike-glitch-interval-fase2 3s infinite linear,
+    spike-color-cycle-fase2 3s infinite linear,
+    rotarYglitchear-reversa 10s infinite linear;
     mix-blend-mode: screen;
   }
   /* -------------------------------------------------- FASE 3----------------------------------------------- */
@@ -257,8 +273,8 @@
     width: 100%;
     height: auto;
     animation: 
-    spike-glitch-interval 3s infinite linear,
-    spike-color-cycle 3s infinite linear;
+    spike-color-cycle-fase2 1.5s infinite linear,
+    rotarYglitchear 5s infinite linear;
     mix-blend-mode: screen;
   }
 
@@ -274,8 +290,8 @@
     width: 100%;
     height: auto;
     animation: 
-    spike-glitch-interval 1s infinite linear,
-    spike-color-cycle 1s infinite linear;
+    spike-glitch-interval-fase2 0.6s infinite linear,
+    spike-color-cycle-fase2 0.6s infinite linear;
     mix-blend-mode: screen;
   }
 
@@ -284,7 +300,15 @@
     right: 95%;
     --rot: 0deg;
     transform: rotate(var(--rot));
-    animation: spike-glitch 0.3s infinite linear;
+  }
+
+  .spike3-fase-3 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 0.3s infinite linear,
+    spike-color-cycle 0.3s infinite linear;
+    mix-blend-mode: screen;
   }
 
   .spike4-fase-3 {
@@ -292,6 +316,15 @@
     right: 15%;
     --rot: 10deg;
     transform: rotate(var(--rot));
+  }
+
+  .spike4-fase-3 img {
+    width: 100%;
+    height: auto;
+    animation: 
+    spike-glitch-interval 3s infinite linear,
+    spike-color-cycle 3s infinite linear;
+    mix-blend-mode: screen;
   }
 
   .spike5-fase-3 {
@@ -306,7 +339,8 @@
     height: auto;
     animation: 
     spike-glitch-interval 5s infinite linear,
-    spike-color-cycle 5s infinite linear;
+    spike-color-cycle 5s infinite linear,
+    girar-lento 10s infinite linear;
     mix-blend-mode: screen;
   }
 
@@ -322,13 +356,53 @@
     width: 100%;
     height: auto;
     animation: 
-    spike-glitch-interval 3s infinite linear,
-    spike-color-cycle 3s infinite linear;
+    spike-glitch-interval-fase2 3s infinite linear,
+    spike-color-cycle-fase2 3s infinite linear,
+    rotarYglitchear-reversa 4s infinite linear;
     mix-blend-mode: screen;
   }
 
+/* -------------------------------------------------- FASE 4-SPIKES ADICIONALES. ----------------------------------------------- */
+
+
+
 
 /* -------------------------------------------------- ADICIONALES ----------------------------------------------- */
+  
+  /* Burbuja 2 */
+  .st2 {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+  }
+
+  .st50 {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+  }
+
+  /* Burbuja 3 */
+  .st11 {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+  }
+
+  .st12 {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+  }
+
+  /* Texto burbuja 4 */
+  .st6 {
+    display: none;
+  }
+
+  .st61 {
+    display: none;
+  }
 
 
 /* -------------------------------------------------- CAMBIOS DE FASES----------------------------------------------- */
@@ -338,19 +412,114 @@
   }
 
 
-  body[data-hash="fase2"] #fase2
+
+
+  body[data-hash="fase2"] #fase2,
+  body[data-hash="fase2"] .st6
   {
     display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  body[data-hash="fase2"] {
+  animation: fondo-animado-2 1s linear forwards;
+  background-color: rgba(83, 39, 72, 0.83);
   }
 
 
-  body[data-hash="fase3"] #fase3
+
+
+
+  body[data-hash="fase3"] #fase3,
+  body[data-hash="fase3"] .st2,
+  body[data-hash="fase3"] .st50,
+  body[data-hash="fase3"] .st61
   {
     display: block;
+    opacity: 1;
+    visibility: visible;
   }
+
+  body[data-hash="fase3"] {
+  animation: fondo-animado-3 0.7s linear forwards;
+  background-color: rgba(83, 39, 72, 0.83);
+  }
+
+
+
+
+  body[data-hash="fase4"] #fase4,
+  body[data-hash="fase4"] .st2,
+  body[data-hash="fase4"] .st50,
+  body[data-hash="fase4"] .st11,
+  body[data-hash="fase4"] .st12,
+  body[data-hash="fase4"] .st61,
+  body[data-hash="fase4"] .spike1-fase-3,
+  body[data-hash="fase4"] .spike2-fase-3,
+  body[data-hash="fase4"] .spike3-fase-3,
+  body[data-hash="fase4"] .spike4-fase-3,
+  body[data-hash="fase4"] .spike5-fase-3,
+  body[data-hash="fase4"] .spike6-fase-3 {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  body[data-hash="fase4"] {
+  animation: 
+  fondo-animado-4 0.1s linear infinite;
+  background-color: rgba(83, 39, 72, 0.83);
+  }
+
+  body[data-hash="fase4"] .chat-fase-1 {
+  animation: 
+  glitch-chat 0.9s linear infinite;
+  }
+
+
+
+  body[data-hash="fase4"] .spike1-fase-3 {
+    animation: 
+    spike-color-cycle-fase2 0.5s infinite linear,
+    rotarYglitchear 2s infinite linear;
+  }
+
+  body[data-hash="fase4"] .spike2-fase-3{
+    animation: 
+    spike-glitch-interval-fase2 0.4s infinite linear,
+    spike-color-cycle-fase2 0.4s infinite linear;
+  }
+  body[data-hash="fase4"] .spike3-fase-3{
+    animation: 
+    spike-glitch-interval 0.3s infinite linear,
+    spike-color-cycle 0.3s infinite linear;
+  }
+  body[data-hash="fase4"] .spike4-fase-3{
+    animation: 
+    spike-glitch-interval 1.5s infinite linear,
+    spike-color-cycle 1.5s infinite linear;
+
+  }
+  body[data-hash="fase4"] .spike5-fase-3{
+    animation: 
+    spike-glitch-interval 2s infinite linear,
+    spike-color-cycle 2s infinite linear,
+    girar-lento 4s infinite linear;
+
+  }
+  body[data-hash="fase4"] .spike6-fase-3{
+    animation: 
+    spike-glitch-interval-fase2 2.3s infinite linear,
+    spike-color-cycle-fase2 2.3s infinite linear,
+    rotarYglitchear-reversa 3.2s infinite linear;
+  }
+
 
 /* -------------------------------------------------- ANIMACIONES----------------------------------------------- */
-  @keyframes spike-glitch-interval {
+/* -------------------------------------------------- FASE 1----------------------------------------------- */
+
+@keyframes spike-glitch-interval {
     0%   { transform: translate(0, 0) rotate(var(--rot)); }
     2%   { transform: translate(3px, -3px) rotate(var(--rot)); }
     4%   { transform: translate(-3px, 3px) rotate(var(--rot)); }
@@ -358,6 +527,7 @@
     8%   { transform: translate(-4px, -4px) rotate(var(--rot)); }
     100%  { transform: translate(0, 0) rotate(var(--rot)); }
   }
+    /*animation: fondo-animado .5s infinite alternate;*/
 
 
   @keyframes spike-color-cycle {
@@ -367,12 +537,116 @@
     100% { filter: none; }
   }
 
+/* -------------------------------------------------- FASE 2----------------------------------------------- */
+    @keyframes spike-glitch-interval-fase2 {
+    0%   { transform: translate(0, 0) rotate(var(--rot)); }
+    2%   { transform: translate(3px, -3px) rotate(var(--rot)); }
+    4%   { transform: translate(4px, 4px) rotate(var(--rot)); }
+    6%   { transform: translate(-4px, -4px) rotate(var(--rot)); }
+    100%  { transform: translate(0, 0) rotate(var(--rot)); }
+  }
 
 
-  @keyframes fondo-animado {
+  @keyframes spike-color-cycle-fase2 {
+    0%   { filter: none; }
+    2%   { filter: drop-shadow(0 0 2px #f00) drop-shadow(0 0 2px #00f); }
+    6%  { filter: drop-shadow(0 0 2px #f00) drop-shadow(0 0 2px #00f); }
+    100% { filter: none; }
+  }
+
+
+    @keyframes rotarYglitchear {
+  0%   { transform: rotate(0deg) translate(0, 0); }
+  10%  { transform: rotate(36deg) translate(3px, -3px); }
+  20%  { transform: rotate(72deg) translate(4px, 4px); }
+  30%  { transform: rotate(108deg) translate(-4px, -4px); }
+  40%  { transform: rotate(144deg) translate(3px, 3px); }
+  50%  { transform: rotate(180deg) translate(0, 0); }
+  60%  { transform: rotate(216deg) translate(-3px, 3px); }
+  70%  { transform: rotate(252deg) translate(2px, -2px); }
+  80%  { transform: rotate(288deg) translate(0px, 2px); }
+  90%  { transform: rotate(324deg) translate(-2px, 0); }
+  100% { transform: rotate(360deg) translate(0, 0); }
+}
+
+
+@keyframes rotarYglitchear-reversa {
+  0%   { transform: rotate(0deg) translate(0, 0); }
+  10%  { transform: rotate(-36deg) translate(3px, -3px); }
+  20%  { transform: rotate(-72deg) translate(4px, 4px); }
+  30%  { transform: rotate(-108deg) translate(-4px, -4px); }
+  40%  { transform: rotate(-144deg) translate(3px, 3px); }
+  50%  { transform: rotate(-180deg) translate(0, 0); }
+  60%  { transform: rotate(-216deg) translate(-3px, 3px); }
+  70%  { transform: rotate(-252deg) translate(2px, -2px); }
+  80%  { transform: rotate(-288deg) translate(0px, 2px); }
+  90%  { transform: rotate(-324deg) translate(-2px, 0); }
+  100% { transform: rotate(-360deg) translate(0, 0); }
+}
+
+
+  @keyframes cambio-color {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(180deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+
+@keyframes girar-lento {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+  @keyframes fondo-animado-2 {
     0%   { background-color: white; }  /* púrpura */
     25%  { background-color: #5b3c64; }  /* vino más suave */
     50%  { background-color: black; }  /* más rojizo */
     75%  { background-color: white; }  /* morado oscuro */
-    100% { background-color: #532748; } /* vuelve al original */
+    100% { background-color: rgba(83, 39, 72, 0.83) } /* vuelve al original */
   }
+/* -------------------------------------------------- FASE 3----------------------------------------------- */
+    @keyframes fondo-animado-3 {
+    0%   { background-color: white; }  /* púrpura */
+    25%  { background-color: #5b3c64; }  /* vino más suave */
+    50%  { background-color: black; }  /* más rojizo */
+    75%  { background-color: white; }  /* morado oscuro */
+    100% { background-color: rgba(83, 39, 72, 0.83) } /* vuelve al original */
+  }
+
+
+
+/* -------------------------------------------------- FASE 4----------------------------------------------- */
+  @keyframes fondo-animado-4 {
+    0%   { background-color: white; }  /* púrpura */
+    25%  { background-color: #5b3c64; }  /* vino más suave */
+    50%  { background-color: black; }  /* más rojizo */
+    75%  { background-color: white; }  /* morado oscuro */
+    100% { background-color: rgba(83, 39, 72, 0.83) } /* vuelve al original */
+  }
+
+
+
+@keyframes glitch-chat {
+  0%   { transform: translateX(0); }
+  10%  { transform: translateX(-3px); }
+  20%  { transform: translateX(3px); }
+  30%  { transform: translateX(-5px); }
+  40%  { transform: translateX(5px); }
+  50%  { transform: translateX(-2px); }
+  60%  { transform: translateX(2px); }
+  70%  { transform: translateX(-1px); }
+  80%  { transform: translateX(1px); }
+  90%  { transform: translateX(0); }
+  100% { transform: translateX(0); }
+}
